@@ -25,4 +25,4 @@ Stay safe.
 
 ## Contribute
 The best way to contribute is by offering help to people in your community. 
-But you can also contribute by improving this code. Pull requests are very welcome. We use a javascript stack.
+But you can also contribute by improving this code. Pull requests are very welcome. We use a javascript stack. We also welcome financial contributions to help us hire a developer to maintain this app ([Donate](https://opencollective.com/quarantine)).
