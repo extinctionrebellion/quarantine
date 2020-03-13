@@ -19,8 +19,8 @@ const Marker = use('App/Models/Marker')
 const User = use('App/Models/User')
 
 Route.get('/api/v1/markers', async ({ response }) => {
-  const items = await Marker.all()
-  response.send(items)
+  let items = await Marker.all();
+  response.send(items.toJSON());
 });
 
 Route.post('/api/v1/markers', async ({ response, request }) => {

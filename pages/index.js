@@ -204,7 +204,7 @@ export default function Index() {
       onClose={handleCloseQuarantineForm}
     >
       <div style={modalStyle} className={classes.paper}>
-        <Form action="markers">
+        <Form action={"markers"}>
           <h2>I need help</h2>
           <TextField className={classes.formControl} variant="outlined"
                             placeholder={"Describe your need, example :  \n- Need bread \n- Need fruits"}
@@ -229,11 +229,10 @@ export default function Index() {
       onClose={handleCloseHelpForm}
     >
       <div style={modalStyle} className={classes.paper}>
-        <h2>I can help</h2>
-        <Form action="markers">
-          <h2>I need help</h2>
+        <Form action={"markers"}>
+          <h2>I can help</h2>
           <TextField className={classes.formControl} variant="outlined"
-                     placeholder={"Describe your need, example :  \n- Need bread \n- Need fruits"}
+                     placeholder={"Describe how you can help, example :  \n- I can deliver foods \n- I make foods"}
                      name="description" required={true} multiline={true}/><br/>
           <h3>Your contact infos (will not be shown publicly)</h3>
           <TextField className={classes.formControl} label="Name" name="name" required/><br/>
