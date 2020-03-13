@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import GoogleMapReact from 'google-map-react';
 import {Favorite, AddAlert, AccessibilityNew} from '@material-ui/icons';
-import {Modal, TextField, TextareaAutosize, AppBar, IconButton, Button, Typography, Toolbar} from "@material-ui/core";
+import {Modal, TextField, AppBar, IconButton, Button, Typography, Toolbar} from "@material-ui/core";
 import {makeStyles} from '@material-ui/core/styles';
 import GooglePlacesAutocomplete, {geocodeByPlaceId} from 'react-google-places-autocomplete';
 import {Form} from '../components';
