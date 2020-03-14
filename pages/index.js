@@ -66,7 +66,7 @@ const QMarker = (props) =>  {
 
   let item = props.item;
 
-  const open = props.$hover;
+  const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
   return (<div id={'marker-'+item.id}>

@@ -83,9 +83,11 @@ User
 ### TODOS
 
 - [ ] Continue the Form for asking help and for help (W.I.P)
-- [ ] Localization
+- [ ] Clustering markers
+- [ ] Localization (en|fr|nl)
 - [ ] Add a popover for each markers (need to be discussed)
-- [ ] Cleaning stuff inside components
+- [ ] Cleaning stuff inside separate components
+- [ ] Document Api
 
 ## Contributing
 
