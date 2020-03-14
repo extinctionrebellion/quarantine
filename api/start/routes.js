@@ -26,6 +26,17 @@ Route.get('/api/v1/markers', async ({ response }) => {
 Route.post('/api/v1/markers', async ({ response, request }) => {
   console.log('POST', request);
   const item = await Marker.create(request.only(['message', 'email', 'name', 'phone', 'addresss', 'lat', 'lng']));
+
+  const user = await User.create(request.only(['email']));
+
+  if (request.get('type') === 'quarantine') {
+    item.creator_id = user.id;
+    item.save();
+  } else {
+    item.helper_id = user.id;
+    item.save();
+  }
+
   item.status = 'active';
   item.save();
   response.send(item)
