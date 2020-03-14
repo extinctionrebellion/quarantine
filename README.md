@@ -82,6 +82,8 @@ User
 
 ### TODOS
 
+- [ ] Define the needed form
+- [ ] Geoloc the address
 - [ ] Continue the Form for asking help and for help (W.I.P)
 - [ ] Clustering markers
 - [ ] Localization (en|fr|nl)
