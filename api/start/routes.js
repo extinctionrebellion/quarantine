@@ -52,7 +52,7 @@ Route.get('/api/v1/search', async ({request, response}) => {
 Route.post('/api/v1/markers', 'MarkerController.store');
 
 Route.get('/api/v1/users', async ({response}) => {
-  const items = await User.query().with('orders').fetch();
+  const items = await User.query().with('orders').with('requests').fetch();
   response.send(items.toJSON())
 });
 

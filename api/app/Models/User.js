@@ -7,7 +7,7 @@ const Hash = use('Hash')
 const Model = use('Model')
 
 class User extends Model {
-  static boot () {
+  static boot() {
     super.boot()
 
     /**
@@ -21,12 +21,16 @@ class User extends Model {
     })
   }
 
-  static get hidden () {
+  static get hidden() {
     return ['password']
   }
 
-  orders () {
-    return this.type === 'helper' ? this.hasMany('App/Models/Order', 'id', 'helper_id') : this.hasMany('App/Models/Order', 'id', 'helped_id');
+  orders() {
+    return this.hasMany('App/Models/Order', 'id', 'helper_id');
+  }
+
+  requests() {
+    return this.hasMany('App/Models/Order', 'id', 'helped_id');
   }
 
   /**
@@ -39,7 +43,7 @@ class User extends Model {
    *
    * @return {Object}
    */
-  tokens () {
+  tokens() {
     return this.hasMany('App/Models/Token')
   }
 }

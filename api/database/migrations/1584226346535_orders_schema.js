@@ -13,8 +13,8 @@ class OrdersSchema extends Schema {
       table.string('email', 60).nullable();
       table.string('type', 60).nullable();
       table.string('status', 60).nullable();
-      table.string('helped_id', 60).nullable();
-      table.string('helper_id', 60).nullable();
+      table.integer('helped_id', 60).nullable();
+      table.integer('helper_id', 60).nullable();
       table.string('address', 60).nullable();
       table.string('lat', 60).nullable();
       table.string('lng', 60).nullable();
