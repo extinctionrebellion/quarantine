@@ -18,15 +18,22 @@ const Route = use('Route')
 const Marker = use('App/Models/Marker')
 const User = use('App/Models/User')
 const Mail = use('Mail')
+const Database = use('Database')
 
 Route.get('/api/v1/markers', async ({response}) => {
   let items = await Marker.all();
   response.send(items.toJSON());
 });
 
+Route.get('/api/v1/search', async ({request, response}) => {
+  let items = await Database.raw('SELECT *, (acos(sin(?) * sin(lat) + cos(?) * cos(lat) * cos(lng - (?))) * 6371) as distance from markers WHERE lat IS NOT NULL ORDER BY distance ASC ', [request.input('lat'), request.input('lat'), request.input('lng')]);
+  response.send(items[0]);
+});
+
 Route.post('/api/v1/markers', async ({response, request}) => {
+
   console.log('POST', request);
-  const item = await Marker.create(request.only(['message', 'email', 'name', 'phone', 'addresss', 'lat', 'lng']));
+  const item = await Marker.create(request.only(['message', 'email', 'name', 'phone', 'address', 'lat', 'lng']));
 
   console.log('Email', request.input('email'));
 
@@ -36,14 +43,10 @@ Route.post('/api/v1/markers', async ({response, request}) => {
     user = await new User;
   }
 
-  console.log('User', user);
-
   user.username = request.input('name');
   user.email = request.input('email');
   user.password = Math.random().toString(36).substr(2, 9);
   user.save();
-
-  console.log('USer', user);
 
   if (request.get('type') === 'quarantine') {
     item.creator_id = user.id;
@@ -73,4 +76,14 @@ Route.post('/api/v1/markers', async ({response, request}) => {
 Route.get('/api/v1/users', async ({response}) => {
   const items = await User.all(['id', 'username'])
   response.send(items)
+});
+
+Route.get('facebook', async ({ ally }) => {
+  await ally.driver('facebook').redirect();
+});
+
+Route.get('facebook/authenticated', async ({ ally }) => {
+  const user = await ally.driver('facebook').getUser()
+
+  return user;
 });
