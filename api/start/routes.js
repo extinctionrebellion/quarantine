@@ -25,8 +25,10 @@ Route.get('/api/v1/markers', async ({ response }) => {
 
 Route.post('/api/v1/markers', async ({ response, request }) => {
   console.log('POST', request);
-  const items = await Marker.create(request.only(['message', 'email']));
-  response.send(items)
+  const item = await Marker.create(request.only(['message', 'email', 'name', 'phone', 'addresss', 'lat', 'lng']));
+  item.status = 'active';
+  item.save();
+  response.send(item)
 });
 
 Route.get('/api/v1/users', async ({ response }) => {

@@ -3,9 +3,9 @@ import GoogleMapReact from 'google-map-react';
 import {Favorite, AddAlert, AccessibilityNew} from '@material-ui/icons';
 import {AppBar, Button,  IconButton,Modal,  Popover, TextField, Typography, Toolbar} from "@material-ui/core";
 import {makeStyles} from '@material-ui/core/styles';
-import GooglePlacesAutocomplete, {geocodeByPlaceId} from 'react-google-places-autocomplete';
 import {Form} from '../components';
 import axios from 'axios';
+import GeolocInput from "../components/GeolocInput";
 
 /**
  * Default class styles for this component
@@ -137,16 +137,6 @@ export default function Index() {
     });
   }
 
-  function getLocalization(res) {
-    console.log('Localization', res);
-    geocodeByPlaceId(res.place_id)
-      .then((results) => {
-        console.log('Results', results);
-        formHelp.location = results;
-      })
-      .catch(error => console.error(error));
-  }
-
   /**
    * On component did mount
    */
@@ -192,7 +182,7 @@ export default function Index() {
       </GoogleMapReact>
     </div>
     <Modal
-      id={'need-help-form'}
+      id={'quarantine-form'}
       aria-labelledby="simple-modal-title"
       aria-describedby="simple-modal-description"
       open={quarantine}
@@ -203,15 +193,15 @@ export default function Index() {
           <h2>I need help</h2>
           <TextField className={classes.formControl} variant="outlined"
                      placeholder={"Describe your need, example :  \n- Need bread \n- Need fruits"}
-                     name="description" required={true} multiline={true}/><br/>
+                     name="message" required={true} multiline={true}/><br/>
           <h3>Your contact infos (will not be shown publicly)</h3>
           <TextField className={classes.formControl} label="Name" name="name" required/><br/>
           <TextField className={classes.formControl} label="Email" name="email" required/><br/>
           <TextField className={classes.formControl} label="Phone" name="phone" required={true}/><br/>
           <br/>
-          <GooglePlacesAutocomplete className={classes.formControl}
-                                    onSelect={getLocalization}/>
+          <GeolocInput />
           <br/>
+          <input type="hidden" name={'type'} value={'quarantine'} />
           <Button type={"submit"} variant="contained" color={'default'} fullWidth={true}>Add your need</Button>
         </Form>
       </div>
@@ -228,16 +218,16 @@ export default function Index() {
           <h2>I can help</h2>
           <TextField className={classes.formControl} variant="outlined"
                      placeholder={"Describe how you can help, example :  \n- I can deliver foods \n- I make foods"}
-                     name="description" required={true} multiline={true}/><br/>
+                     name="message" required={true} multiline={true}/><br/>
           <h3>Your contact infos (will not be shown publicly)</h3>
           <TextField className={classes.formControl} label="Name" name="name" required/><br/>
           <TextField className={classes.formControl} label="Email" name="email" required/><br/>
           <TextField className={classes.formControl} label="Phone" name="phone" required={true}/><br/>
           <br/>
-          <GooglePlacesAutocomplete className={classes.formControl}
-                                    onSelect={() => getLocalization('')}/>
+          <GeolocInput />
           <br/>
-          <Button type={"submit"} variant="contained" color={'default'} fullWidth={true}>Add your need</Button>
+          <input type="hidden" name={'type'} value={'helper'} />
+          <Button type={"submit"} variant="contained" color={'default'} fullWidth={true}>Propose your help</Button>
         </Form>
       </div>
     </Modal>
