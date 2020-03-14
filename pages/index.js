@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import GoogleMapReact from 'google-map-react';
 import {Favorite, AddAlert, AccessibilityNew} from '@material-ui/icons';
-import {AppBar, Button,  IconButton,Modal,  Popover, TextField, Typography, Toolbar} from "@material-ui/core";
+import {AppBar, Button,  IconButton, Modal,  Popover, TextField, Typography, Toolbar} from "@material-ui/core";
 import {makeStyles} from '@material-ui/core/styles';
 import {Form} from '../components';
 import axios from 'axios';
@@ -189,7 +189,7 @@ export default function Index() {
       onClose={handleCloseQuarantineForm}
     >
       <div style={modalStyle} className={classes.paper}>
-        <Form action={"markers"}>
+        <Form action={"markers"} onSuccess={getMarkers}>
           <h2>I need help</h2>
           <TextField className={classes.formControl} variant="outlined"
                      placeholder={"Describe your need, example :  \n- Need bread \n- Need fruits"}
