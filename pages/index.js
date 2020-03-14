@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import GoogleMapReact from 'google-map-react';
 import {Favorite, AddAlert, AccessibilityNew} from '@material-ui/icons';
-import {Modal, TextField, AppBar, IconButton, Button, Typography, Toolbar} from "@material-ui/core";
+import {AppBar, Button,  IconButton,Modal,  Popover, TextField, Typography, Toolbar} from "@material-ui/core";
 import {makeStyles} from '@material-ui/core/styles';
 import GooglePlacesAutocomplete, {geocodeByPlaceId} from 'react-google-places-autocomplete';
 import {Form} from '../components';
@@ -40,19 +40,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-/**
- * Quarantine marker
- *
- * @param item
- * @returns {*}
- * @constructor
- */
-const QMarker = ({item}) => <div>
-  <IconButton>
-    {item.type === 'quarantine' ? <AccessibilityNew></AccessibilityNew> : <Favorite></Favorite>}
-  </IconButton>
-</div>;
-
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -64,47 +51,69 @@ function getModalStyle() {
   };
 }
 
+const QMarker = (props) =>  {
+
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState();
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  let item = props.item;
+
+  const open = props.$hover;
+  const id = open ? 'simple-popover' : undefined;
+
+  return (<div id={'marker-'+item.id}>
+    {props.children}
+    <IconButton
+      aria-owns={open ? 'mouse-over-popover' : undefined}
+      aria-haspopup="true"
+      onClick={handleClick}
+    >
+      {props.item.type === 'quarantine' ? <AccessibilityNew></AccessibilityNew> : <Favorite></Favorite>}
+    </IconButton>
+    <Popover
+      id={id}
+      open={open}
+      anchorEl={anchorEl}
+      onClose={handleClose}
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'center',
+      }}
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'center',
+      }}
+    >
+      <Typography className={classes.typography}>{item.message}</Typography>
+    </Popover>
+  </div>)
+};
+
 export default function Index() {
 
   const classes = useStyles();
 
+  /**
+   * Component states
+   */
   const [modalStyle] = React.useState(getModalStyle);
   const [help, setHelp] = React.useState(false);
   const [quarantine, setQuarantine] = React.useState(false);
   const [markers, setMarkers] = React.useState([]);
 
   /**
-   * Define entity schema
-   * @type {{address: null, lng: null, phone: null, name: null, message: null, type: string, email: null, lat: null}}
+   * Methods
+   *
+   * @returns {Promise<AxiosResponse<T>>}
    */
-  let quarantineSchema = {
-    name: null,
-    phone: null,
-    email: null,
-    message: null,
-    address: null,
-    type: 'quarantine',
-    lat: null,
-    lng: null
-  };
-
-  let helpSchema = {
-    name: null,
-    phone: null,
-    email: null,
-    message: null,
-    address: null,
-    type: 'help',
-    lat: null,
-    lng: null
-  };
-
-  const [quarantineForm, setQuarantineForm] = React.useState(quarantineSchema);
-  const [helpForm, setHelpForm] = React.useState(helpSchema);
-
-  const [formHelp, setFormHelp] = React.useState({
-    location: {}
-  });
 
   const handleOpenHelpForm = () => {
     setHelp(true);
@@ -122,14 +131,8 @@ export default function Index() {
     setQuarantine(false);
   };
 
-  /**
-   * Methods
-   *
-   * @returns {Promise<AxiosResponse<T>>}
-   */
   function getMarkers() {
-    return axios.get(process.env.API_URL+'markers').then((res) => {
-      console.log(res);
+    return axios.get(process.env.API_URL + 'markers').then((res) => {
       setMarkers(res.data);
     });
   }
@@ -144,15 +147,8 @@ export default function Index() {
       .catch(error => console.error(error));
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const data = new FormData(event.target);
-
-    console.log('data', data);
-  }
-
   /**
-   * On component mount
+   * On component did mount
    */
   useEffect(() => {
     getMarkers();
@@ -192,8 +188,7 @@ export default function Index() {
       <GoogleMapReact
         defaultCenter={{lat: 50.51, lng: 4.20}}
         defaultZoom={8}>
-        {markers.map((item) => <QMarker key={item.id} lat={item.lat} lng={item.lng} text={item.title}
-                                        item={item}/>)}
+        {markers.map((item) => <QMarker key={item.id} lat={item.lat} lng={item.lng} text={item.title} item={item} />)}
       </GoogleMapReact>
     </div>
     <Modal
@@ -207,8 +202,8 @@ export default function Index() {
         <Form action={"markers"}>
           <h2>I need help</h2>
           <TextField className={classes.formControl} variant="outlined"
-                            placeholder={"Describe your need, example :  \n- Need bread \n- Need fruits"}
-                            name="description" required={true} multiline={true}/><br/>
+                     placeholder={"Describe your need, example :  \n- Need bread \n- Need fruits"}
+                     name="description" required={true} multiline={true}/><br/>
           <h3>Your contact infos (will not be shown publicly)</h3>
           <TextField className={classes.formControl} label="Name" name="name" required/><br/>
           <TextField className={classes.formControl} label="Email" name="email" required/><br/>

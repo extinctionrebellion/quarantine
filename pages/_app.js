@@ -7,6 +7,7 @@ import theme from '../src/theme';
 import 'react-google-places-autocomplete/dist/assets/index.css';
 
 export default class MyApp extends App {
+
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');

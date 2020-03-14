@@ -13,7 +13,6 @@ class Marker extends Model {
     return ['email', 'name', 'creator_id', 'helper_id']
   }
 
-
   getPoint({ lat, lng }) {
     return {
       type: 'point',

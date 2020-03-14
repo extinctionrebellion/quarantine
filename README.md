@@ -1,4 +1,5 @@
-# quarantine
+# Quarantine.help
+
 In quarantine for #covid19? Share what you need and find rebels that can help you.
 
 We are rebelling against extinction and we won't leave anyone behind.
@@ -81,10 +82,10 @@ User
 
 ### TODOS
 
-[ ] Continue the Form for asking help and for help (W.I.P)
-[ ] Localization
-[ ] Add a popover for each markers (need to be discussed)
-[ ] Cleaning stuff inside components
+- [ ] Continue the Form for asking help and for help (W.I.P)
+- [ ] Localization
+- [ ] Add a popover for each markers (need to be discussed)
+- [ ] Cleaning stuff inside components
 
 ## Contributing
 

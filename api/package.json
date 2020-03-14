@@ -1,8 +1,8 @@
 {
-  "name": "adonis-fullstack-app",
+  "name": "quarantine-api",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "Quarantine Api",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -12,8 +12,8 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "daniel@cherrypulp.com",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@adonisjs/ace": "^5.0.8",
@@ -26,9 +26,9 @@
     "@adonisjs/lucid": "^6.1.3",
     "@adonisjs/session": "^1.0.27",
     "@adonisjs/shield": "^1.0.8",
+    "laravel-mix": "^5.0.1",
     "mysql": "^2.18.1",
     "pg": "^7.18.2",
-    "react-places-autocomplete": "^7.2.1",
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {},
