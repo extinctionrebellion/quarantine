@@ -11,14 +11,19 @@
 */
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
-const Factory = use('Factory')
-const Database = use('Database')
+const Factory = use('Factory');
 
 class MarkerSeeder {
+
   async run () {
+
     const user = await Factory
       .model('App/Models/User')
-      .createMany(100);
+      .createMany(10);
+
+    const orders = await Factory
+      .model('App/Models/Order')
+      .createMany(10);
 
     const marker = await Factory
       .model('App/Models/Marker')

@@ -25,6 +25,10 @@ class User extends Model {
     return ['password']
   }
 
+  orders () {
+    return this.type === 'helper' ? this.hasMany('App/Models/Order', 'id', 'helper_id') : this.hasMany('App/Models/Order', 'id', 'helped_id');
+  }
+
   /**
    * A relationship on tokens is required for auth to
    * work. Since features like `refreshTokens` or

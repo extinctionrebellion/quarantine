@@ -10,7 +10,7 @@ class Marker extends Model {
   }
 
   static get hidden () {
-    return ['email', 'name', 'creator_id', 'helper_id']
+    return ['email', 'name']
   }
 
   getPoint({ lat, lng }) {

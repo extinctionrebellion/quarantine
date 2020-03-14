@@ -7,10 +7,21 @@ class UserSchema extends Schema {
   up () {
     this.create('users', (table) => {
       table.increments()
-      table.string('username', 80).notNullable().unique()
-      table.string('email', 254).notNullable().unique()
-      table.string('password', 60).nullable()
-      table.timestamps()
+      table.string('username', 80).notNullable().unique();
+      table.string('email', 254).notNullable().unique();
+      table.string('thumb', 254).nullable();
+      table.string('password', 60).nullable();
+      table.string('name', 256).nullable();
+      table.string('first_name', 256).nullable();
+      table.string('phone', 256).nullable();
+      table.string('address', 256).nullable();
+      table.string('lat', 60).nullable();
+      table.string('lng', 60).nullable();
+      table.string('type', 60).nullable();
+      table.string('status', 60).nullable();
+      table.string('senior_notes', 256).nullable();
+      table.string('senior_represented_by', 256).nullable();
+      table.timestamps();
     })
   }
 
