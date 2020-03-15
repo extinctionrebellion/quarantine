@@ -57,3 +57,11 @@
         }
     }
 }
+
+.list-team {
+    @extend .list-inline;
+
+    .list-inline-item {
+        margin-bottom: 10px;
+    }
+}
