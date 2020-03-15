@@ -490,7 +490,8 @@ mark,
   list-style: none;
 }
 
-.list-inline {
+.list-inline,
+.list-team {
   padding-left: 0;
   list-style: none;
 }
@@ -10752,6 +10753,14 @@ a.link-facebook:hover {
   width: 2px;
 }
 
+.list-team .list-inline-item {
+  margin-bottom: 10px;
+}
+
+.app-header .navbar-nav {
+  flex-direction: row;
+}
+
 .app-header .navbar-nav .nav-item.active .nav-link {
   color: #000;
   text-decoration: underline;
@@ -10759,6 +10768,8 @@ a.link-facebook:hover {
 
 .app-header .navbar-nav .nav-item .nav-link {
   color: #44b144;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
 
 .app-header .navbar-nav .nav-item .nav-link:hover {

@@ -2,6 +2,8 @@
 
 .app-header {
     .navbar-nav {
+        flex-direction: row;
+
         .nav-item {
             &.active {
                 .nav-link {
@@ -12,6 +14,8 @@
 
             .nav-link {
                 color: $success;
+                padding-left: .6rem;
+                padding-right: .6rem;
 
                 &:hover {
                     text-decoration: underline;
