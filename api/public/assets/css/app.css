@@ -10660,6 +10660,12 @@ a.link-facebook:hover {
   padding: 10px 30px;
 }
 
+@media (max-width: 767.98px) {
+  .btn-mobile-block {
+    display: block;
+  }
+}
+
 .card-question {
   background-color: #fff;
   border-color: #dee2e6;
