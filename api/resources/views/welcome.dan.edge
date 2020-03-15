@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 solidarity</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Envie de donner un coup de main à votre voisin ?" />
+  <meta property="og:description" content="Rejoignez notre mouvement et proposez à votre voisin de faire ses courses de première nécessité." />
+  <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+  <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160690896-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-160690896-1');
+  </script>
+</head>
+<body>
+<div id="app">
+  <nav>
+    <img src="assets/img/logo.svg" alt="covid-19 solidarity logo">
+    <a href="#" id="button-fr" class="button-language" onclick="changeLanguage('fr')">FR</a>
+    <a href="#" id="button-nl" class="button-language" onclick="changeLanguage('nl')">NL</a>
+    <a href="#" id="button-en" class="button-language" onclick="changeLanguage('en')">EN</a>
+  </nav>
+
+  <header class="container-white container-header">
+    <section class="df-center container-txt-general">
+      <div class="container-text">
+        <h1 id="headerTitle">Envie de donner un coup de main à votre voisin ?</h1>
+        <p id="headerDescription">
+          Rejoignez notre mouvement et proposez à votre voisin
+          de faire ses courses de première nécessité.
+        </p>
+      </div>
+      <div class="header-container-button">
+        <a href="#help" class="button button-green df-center" id="headerButtonRequestHelp">Participer</a>
+      </div>
+    </section>
+    <section class="df-center header-img-container">
+      <img src="assets/img/header-pic.png" class="header-img" alt="applicant opening the door">
+    </section>
+  </header>
+
+  <div class="container">
+    <div class="df-center">
+      <h2>Répandons la solidarité, pas le virus</h2>
+    </div>
+    <p class="text-center">
+      Pour endiguer rapidement la propagation du virus, le gouvernement et le milieu médical recommandent fortement à
+      la population de rester à domicile. Mais comment faire pour s’alimenter et se fournir en produits de première
+      nécessité tout en restant chez soi ?
+    </p>
+  </div>
+
+  <section class="container-white">
+    <div class="container-explanation">
+      <!-- Comment ça marche -->
+      <h2 class="h2Title">Comment ça marche?</h2>
+      <div class="card-header">
+        <img src="assets/img/applicant.png" alt="applicant">
+        <p class="card-header-txt" id="cardSeniorQuote">« Je souhaite obtenir de l'aide »</p>
+      </div>
+      <nav id="need-help-howto">
+        <ul class="ul-explanation">
+          <li class="li-p-img">
+            <img src="./assets/img/Group 13.svg" alt="Group13"/>
+            <p class="howWorks">Imprimez la liste de course ou demandez à votre voisin de
+              le faire pour vous.
+            </p>
+          </li>
+          <li class="li-p-img">
+            <img src="./assets/img/Group 14.svg" alt="Group14"/>
+            <p class="howWorks">Postez-la sur à votre fenêtre, collez-la à votre porte ou placez-la dans votre
+              hall d’entrée.</p>
+          </li>
+          <li class="li-p-img">
+            <img src="./assets/img/Group 16.svg" alt="Group16"/>
+            <p class="howWorks">Attendez qu’un voisin la récupère. Il prendra contact avec vous et vous livrera
+              sans tarder.</p>
+          </li>
+        </ul>
+      </nav>
+      <div class="card-header">
+        <img src="assets/img/hero.png" alt="hero">
+        <p class="card-header-txt" id="cardsYoungQuote">« Je veux fournir de l'aide »</p>
+      </div>
+
+      <!-- TODO -->
+      <ul class="card-txt">
+        <li class="card-text"><b>1. </b><span id="cardsSeniorStepsStepOne"> Inscrivez-vous à travers notre formulaire.</span>
+        </li>
+        <li class="card-text"><b>2. </b> <span id="cardsSeniorStepsStepTwo">On vous rappelle au plus vite pour passer votre
+                        commande.</span></li>
+        <li class="card-text"><b>3. </b> <span id="cardsSeniorStepsStepThree">Un jeune aidant dans votre quartier ira faire les
+                        courses pour vous. Il déposera les courses
+                        devant chez vous et vous enverra un SMS à l’arrivée.</span></li>
+      </ul>
+      <!-- TODO -->
+      <a href="#">Imprimez la liste de course</a>
+    </div>
+  </section>
+
+  <section class="container" id="help">
+    <!-- APPLICANTS -->
+    <div class="card">
+      <div class="card-header">
+        <img src="assets/img/applicant.png" alt="applicant">
+        <p class="card-header-txt" id="cardSeniorQuote">« J’ai besoin d’aide »</p>
+      </div>
+      <h2 id="cardSeniorTitle">Quelles étapes faut-il suivre pour se faire aider ?</h2>
+      <ul class="card-txt">
+        <li class="card-text"><b>1. </b><span id="cardsSeniorStepsStepOne"> Inscrivez-vous à travers notre formulaire.</span>
+        </li>
+        <li class="card-text"><b>2. </b> <span id="cardsSeniorStepsStepTwo">On vous rappelle au plus vite pour passer votre
+                        commande.</span></li>
+        <li class="card-text"><b>3. </b> <span id="cardsSeniorStepsStepThree">Un jeune aidant dans votre quartier ira faire les
+                        courses pour vous. Il déposera les courses
+                        devant chez vous et vous enverra un SMS à l’arrivée.</span></li>
+      </ul>
+      <button class="button button-green df-center" id="cardsSeniorButton">Besoin d’aide? Cliquez ici</button>
+    </div>
+
+    <!-- HEROES -->
+    <div class="card">
+      <div class="card-header">
+        <img src="assets/img/hero.png" alt="hero">
+        <p class="card-header-txt" id="cardsYoungQuote">« Je veux fournir de l'aide »</p>
+      </div>
+      <h2 id="cardsYoungTitle">Informations concernant l’aide aux personnes en besoin</h2>
+      <ul class="card-txt">
+        <li>
+          <h3 id="cardsYoungSetpsStepOneTitle">1. Pourquoi est-ce que je voudrais aider ?</h3>
+          <p id="cardsYoungSetpsStepOneText">
+            Tu as un peu de temps ? Des personnes sont en besoin, c’est l’occasion de les aider! Ensemble,
+            on
+            peut battre le covid-19.
+          </p>
+        </li>
+        <li>
+          <h3 id="cardsYoungSetpsStepTwoTitle"> 2. Comment est-ce que ça se passe pour aider ?</h3>
+          <p id="cardsYoungSetpsStepTwoText">
+            Pas besoin de beaucoup de temps ou de permis de conduire, il suffit de remplir le formulaire et
+            de respecter quelques règles d’hygiène !
+          </p>
+        </li>
+
+      </ul>
+      <button class="button button-white df-center" id="cardsYoungButton">Je veux aider</button>
+    </div>
+  </section>
+
+  <section class="container-white container-faq-team">
+    <div class="container-title-faq">
+      <h2 class="h2Title">Vous avez des questions ? Nous avons les réponses !</h2>
+      <!-- FAQ -->
+      <div class="card-header">
+        <img src="assets/img/hero.png" alt="hero">
+        <p class="card-header-txt" id="cardsYoungQuote">« Je veux fournir de l'aide »</p>
+      </div>
+      <div class="container-faq">
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Suis-je rémunéré pour aider en aide à mon voisin ?</h3>
+              <p id="cardsYoungSetpsStepOneText">
+                Non, nous agissons dans une approche strictement citoyenne et bénévole.
+                Mais libre à votre voisin de vous remercier à sa guise s’il le souhaite.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Je ne veux pas avancer de l’argent
+              </h3>
+              <p id="cardsYoungSetpsStepOneText">
+                C’est une condition indispensable pour aider un voisin. Pour alléger votre portefeuille,
+                nous vous invitons à n’acheter que des biens de première nécessité.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Comment déposer les courses au sein d’un immeuble ?</h3>
+              <p id="cardsYoungSetpsStepOneText">
+                Il suffit de prendre contact avec votre voisin pour lui indiquer l’heure à laquelle vous
+                déposerez les courses devant sa porte. N’oubliez pas de respecter les règles d’hygiène.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Comment vais-je être remboursé ?</h3>
+              <p id="cardsYoungSetpsStepOneText">
+                C’est très simple ! Il suffit d’indiquer votre numéro de compte sur la liste de course que
+                vous rendrez à votre voisin. Pour le bon service rendu, il vous remboursera sans tarder.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card-header">
+        <img src="assets/img/applicant.png" alt="applicant">
+        <p class="card-header-txt" id="cardSeniorQuote">« Je souhaite obtenir de l’aide »</p>
+      </div>
+      <div class="container-faq">
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Suis-je rémunéré pour aider en aide à mon voisin ?</h3>
+              <p id="cardsYoungSetpsStepOneText">
+                Non, nous agissons dans une approche strictement citoyenne et bénévole.
+                Mais libre à votre voisin de vous remercier à sa guise s’il le souhaite.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Je ne veux pas avancer de l’argent
+              </h3>
+              <p id="cardsYoungSetpsStepOneText">
+                C’est une condition indispensable pour aider un voisin. Pour alléger votre portefeuille,
+                nous vous invitons à n’acheter que des biens de première nécessité.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Comment déposer les courses au sein d’un immeuble ?</h3>
+              <p id="cardsYoungSetpsStepOneText">
+                Il suffit de prendre contact avec votre voisin pour lui indiquer l’heure à laquelle vous
+                déposerez les courses devant sa porte. N’oubliez pas de respecter les règles d’hygiène.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="card">
+          <ol class="card-txt">
+            <li>
+              <h3 id="cardsYoungSetpsStepOneTitle">Comment vais-je être remboursé ?</h3>
+              <p id="cardsYoungSetpsStepOneText">
+                C’est très simple ! Il suffit d’indiquer votre numéro de compte sur la liste de course que
+                vous rendrez à votre voisin. Pour le bon service rendu, il vous remboursera sans tarder.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="df-center team">
+      <h2 id="teamTitle">Qui sommes-nous?</h2>
+      <p id="teamDescription">
+        Une communauté d'entrepreneurs et professionnels #tech désireux d’apporter leur aide rapide via la
+        technologie. Un mouvement non-lucratif qui permet de créer du lien social dans une démarche de calme et
+        de
+        bienveillance.
+      </p>
+      <div class="container-founders">
+        <img src="/assets/img/team_1.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_2.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_3.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_4.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_5.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_6.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_7.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_8.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_9.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_10.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_11.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_12.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_13.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_14.png" alt="pic" class="img-rounded"/>
+        <img src="/assets/img/team_15.png" alt="pic" class="img-rounded"/>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>
+      ❤️ Made with love to beat Covid-19
+    </p>
+    <p>
+      Contact - <a href="mailto:info@covid-solidarity.org">info@covid-solidarity.org</a>
+      <a href="https://www.facebook.com/groups/212278966799212/">Join the movement on Facebook</a>
+    </p>
+  </footer>
+</div>
+<script src="/assets/js/app.js"></script>
+</body>
+</html>
