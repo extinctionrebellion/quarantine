@@ -1,0 +1,31 @@
+
+.card-question {
+    background-color: $white;
+    border-color: $gray-300;
+
+    .card-body {
+        .card-title {
+            @include font-size(20px);
+            padding-left: 30px;
+            position: relative;
+
+            &::before {
+                background-color: $success;
+                border-radius: 50%;
+                color: $white;
+                content: '?';
+                display: block;
+                @include font-size(14px);
+                font-weight: bold;
+                height: 22px;
+                left: 0;
+                line-height: 22px;
+                position: absolute;
+                text-align: center;
+                width: 22px;
+            }
+        }
+
+        .card-text {}
+    }
+}

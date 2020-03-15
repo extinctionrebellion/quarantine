@@ -1,0 +1,23 @@
+$btn-font-size: 16px;
+$btn-padding-x: 10px;
+$btn-padding-y: 30px;
+
+.btn {
+    border-radius: 24px;
+    font-size: $btn-font-size;
+    padding: $btn-padding-x $btn-padding-y;
+}
+
+//.button {
+//  border-radius: 24px;
+//  width: 272px;
+//  height: 48px;
+//  border: 0;
+//  margin: 2px;
+//  font-weight: 700;
+//  font-size: 16px;
+//}
+//.button-green {
+//  background-color: #44b244;
+//  color: white;
+//}

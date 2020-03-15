@@ -1,9 +1,43 @@
 #app {}
 
-.app-header {}
+.app-header {
+    .navbar-nav {
+        .nav-item {
+            &.active {
+                .nav-link {
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
 
-.app-body {}
+            .nav-link {
+                color: $success;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.app-body {
+    section {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    .section-spacer {
+        height: 120px;
+    }
+
+    .card-deck {
+        margin-bottom: 2em;
+    }
+}
 
 .app-footer {
     background-color: $gray-200;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
