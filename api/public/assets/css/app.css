@@ -1,0 +1,252 @@
+/* * --------- GENERAL -------- * */
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background-color: #F4F4F4;
+}
+
+h1 {
+  font-size: 42px;
+  color: #171717;
+  margin: 0;
+}
+
+.df-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* * --------- NAV -------- * */
+
+nav {
+  background-color: #fff;
+  padding: 2% 5%;
+  display: flex;
+  align-items: center;
+}
+
+#button-fr {
+  margin-left: auto;
+}
+
+.button-language {
+  margin: 0 5px;
+  color: #44B244;
+}
+
+/* * --------- COMPONENTS -------- * */
+
+.container {
+  /* border: 1px solid red; */
+  display: flex;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-bottom: 20px;
+}
+
+.container-white {
+  background: #FFFFFF;
+}
+
+.button {
+  border-radius: 24px;
+  width: 272px;
+  height: 48px;
+  border: 0;
+  margin: 2px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 25px;
+}
+
+.button-green {
+  background-color: #44B244;
+  color: white;
+}
+
+.button-white {
+  font-weight: 700;
+  border: 1px solid #44B244;
+  background-color: #fff;
+}
+
+/* * --------- HEADER -------- * */
+
+.container-header {
+  padding: 70px 0;
+}
+
+.header-img {
+  width: 580px;
+  height: 387px;
+}
+
+.container-txt-general {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 579px;
+}
+
+.header-container-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* * --------- CARDS -------- * */
+
+.card {
+  width: 35%;
+  margin: 30px 0;
+  min-height: 600px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #D1D1D1;
+  border-radius: 8px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.card-header img {
+  margin-right: 20px;
+}
+
+.card-header-txt {
+  color: #171717;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.card h2 {
+  font-weight: 800;
+  line-height: 36px;
+  font-size: 28px;
+}
+
+.card ol li {
+  margin: 15px 0;
+  list-style-type: none;
+}
+
+.card button {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* * --------- TEAM -------- * */
+
+.team {
+  padding: 150px 0;
+}
+
+.team h2 {
+  font-size: 30px;
+}
+
+.team p {
+  max-width: 45%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 39px;
+}
+
+/* * --------- FOOTER -------- * */
+
+footer p {
+  font-family: AppleColorEmoji;
+  font-family: 18px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* * --------- MEDIA QUERIES -------- * */
+
+@media screen and (max-width: 1160px) {
+  /* * ----- HEADER ----- * */
+
+  h1 {
+    text-align: center;
+    margin: 0 10px;
+    margin-bottom: 16px;
+  }
+
+  .header-container-button {
+    justify-content: center;
+    margin-bottom: 40px;
+    margin: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .header-container-button .button {
+    margin-bottom: 10px;
+    width: 95%;
+  }
+
+  .container-txt-general {
+    align-items: center;
+  }
+
+  .container-text p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .header-img-container {
+    display: none;
+  }
+
+  /* * ----- CARDS ----- * */
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 85%;
+  }
+
+  .card-header {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card h2 {
+    text-align: center;
+  }
+
+  .card-txt {
+    padding: 0;
+  }
+
+  /* * ----- TEAM ----- * */
+
+  .team p {
+    font-size: 24px;
+    max-width: 90%;
+    padding: 10px 0;
+  }
+}
+
