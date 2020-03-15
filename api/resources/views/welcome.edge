@@ -1,382 +1,344 @@
 @layout('layouts.default')
 
 @section('content')
-    <section class="bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col" data-aos="fade-right">
-                    <h1>Envie de donner un coup de main à votre voisin ?</h1>
-                    <p>
-                        Rejoignez notre mouvement et proposez à votre voisin de faire ses courses de première nécessité.
-                    </p>
-                    <a class="btn btn-success btn-mobile-block" href="#help">Participer</a>
-                </div>
-                <div class="col d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
-                    <img src="/assets/img/header-pic.png" alt="applicant opening the door">
-                </div>
+<section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Envie de donner un coup de main à votre voisin ?</h1>
+                <p>
+                    Rejoignez notre mouvement et proposez à votre voisin de faire ses courses de première nécessité.
+                </p>
+                <a class="btn btn-success" href="#help">Participer</a>
+            </div>
+            <div class="col">
+                <img class="header-img" src="/assets/img/header-pic.png" alt="applicant opening the door">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="bg-light">
-        <div class="container">
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="col-md-9 text-center">
-                    <h2>Répandons la solidarité, pas le virus</h2>
-                    <p>Pour endiguer rapidement la propagation du virus, le gouvernement et le milieu médical recommandent fortement à la population de rester à domicile. Mais comment faire pour s’alimenter et se fournir en produits de première nécessité tout en restant chez soi ?</p>
-                </div>
+<section class="bg-light">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-9 text-center">
+                <h2>Répandons la solidarité, pas le virus</h2>
+                <p>Pour endiguer rapidement la propagation du virus, le gouvernement et le milieu médical recommandent fortement à la population de rester à domicile. Mais comment faire pour s’alimenter et se fournir en produits de première nécessité tout en restant chez soi?</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="bg-white" id="help">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up">
-                    <h2>Comment ça marche ?</h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="200">
-                    <img class="rounded" src="/assets/img/applicant.png" alt="applicant">
-                    <h3 class="title-quote">Je souhaite obtenir de l’aide</h3>
-                </div>
-            </div>
-
-            <div class="row mt-3">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <p class="text-center"><img src="/assets/img/ico_print.svg" height="100px"/></p>
-                    <p>Imprimez la liste de course ou demandez à votre voisin de le faire pour vous.</p>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                    <p class="text-center"><img src="/assets/img/ico_door.svg" height="100px"/></p>
-                    <p>Postez-la sur à votre fenêtre, collez-la à votre porte ou placez-la dans votre hall d’entrée.</p>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
-                    <p class="text-center"><img src="/assets/img/ico_thanks.svg" height="100px"/></p>
-                    <p>Attendez qu’un voisin la récupère. Il prendra contact avec vous et vous livrera sans tarder. </p>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="600">
-                    <a class="btn btn-success btn-mobile-block" href="#">Imprimer la liste de course</a>
-                </div>
-            </div>
-
-            <div class="section-spacer"></div>
-
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="200">
-                    <img class="rounded" src="/assets/img/hero.png" alt="hero">
-                    <h3 class="title-quote">Je suis un bénévole et je veux aider</h3>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
-                    <ol class="list-instructions">
-                        <li>
-                            Imprimez le modèle “liste de course” en format A4
-                        </li>
-                        <li>
-                            Partagez-la ou placez-la dans la boite aux lettre de votre voisin
-                        </li>
-                        <li>
-                            Retournez chez vous et discutez avec vos proches autour d’un café.
-                        </li>
-                        <li>
-                            Baladez-vous dans votre rue pour voir qui vous pourriez aider
-                        </li>
-                        <li>
-                            Récupérez la liste de courses et prévenez votre voisin !
-                        </li>
-                        <li>
-                            Rendez-vous en magasin et ne dévalisez pas les étagères.
-                        </li>
-                        <li>
-                            Retournez délivrer les produits devant la porte et sonnez à la porte !
-                        </li>
-                        <li>
-                            Mission réussie, merci infiniment pour votre collaboration !
-                        </li>
-                        <li class="list-item-instagram">
-                            Partagez une photo sur Facebook avec le #
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="400">
-                    <a class="btn btn-success btn-mobile-block" href="#">Imprimer la liste de course</a>
-                </div>
+<section class="bg-white" id="help">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Comment ça marche ?</h2>
             </div>
         </div>
-    </section>
 
-    <!--<section class="bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>Instagram feed</h2>
-
-                    TODO
-                </div>
+        <div class="row">
+            <div class="col text-center">
+                <img class="rounded" src="/assets/img/applicant.png" alt="applicant">
+                <h3 class="title-quote">"Je souhaite obtenir de l’aide"</h3>
             </div>
         </div>
-    </section>-->
 
-    <section class="bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="200">
-                    <h2>Mesures à respecter</h2>
-                </div>
+        <div class="row mt-3">
+            <div class="col">
+                <p class="text-center"><img src="/assets/img/ico_print.svg" height="100px"/></p>
+                <p>Imprimez la liste de course ou demandez à votre voisin de le faire pour vous.</p>
             </div>
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="col-lg-8">
-                    <ol>
-                        <li>
-                            Lavez-vous les mains régulièrement ou utilisez une solution hydro-alcoolique, surtout après la livraison (tant la personne isolée que le bénévole)
-                        </li>
-                        <li>
-                            Gardez une distance de 3 mètres entre la personne isolée et le bénévole et évitez tout contact physique et avec les personnes fragiles. Évitez aussi tout contact avec d’autres personnes
-                        </li>
-                        <li>
-                            Évitez de toucher les poignées de porte et autres objets métalliques lors de la livraison. Privilégiez les appels ou messages/whatsapp.
-                        </li>
-                        <li>
-                            Si vous n’avez pas de mouchoir à portée de main, éternuez ou toussez dans le pli du coude.
-                        </li>
-                        <li>
-                            Faites attention aux groupes à risque (personnes de plus de 65 ans, diabétiques, personnes souffrant de maladies cardiaques, pulmonaires ou rénales, personnes immunodéprimées, ...).
-                        </li>
-                        <li>
-                            Le reste du temps (quand vous n’effectuez pas de livraisons), nous vous inviter à rester chez vous et limiter au maximum vos contacts avec d’autres personnes.
-                        </li>
-                    </ol>
-
-                    <p>
-                        Plus de détails sur : <a href="https://www.info-coronavirus.be/fr/" target="_blank">https://www.info-coronavirus.be/fr/</a>
-                    </p>
-                </div>
+            <div class="col">
+                <p class="text-center"><img src="/assets/img/ico_door.svg" height="100px"/></p>
+                <p>Postez-la sur à votre fenêtre, collez-la à votre porte ou placez-la dans votre hall d’entrée.</p>
+            </div>
+            <div class="col">
+                <p class="text-center"><img src="/assets/img/ico_thanks.svg" height="100px"/></p>
+                <p>Attendez qu’un voisin la récupère. Il prendra contact avec vous et vous livrera sans tarder. </p>
             </div>
         </div>
-    </section>
 
-    <section class="bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="200">
-                    <h2>Vous avez des questions ? Nous avons les réponses !</h2>
-                </div>
+        <div class="text-center">
+            <a href="/files/FR.jpg" class="btn btn-success">Imprimer la liste de course</a>
+        </div>
+
+        <div class="section-spacer"></div>
+
+        <div class="row">
+            <div class="col text-center">
+                <img class="rounded" src="/assets/img/hero.png" alt="hero">
+                <h3 class="title-quote">"Je suis un bénévole et je veux aider"</h3>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img class="rounded" src="/assets/img/hero.png" alt="hero">
-                    <h3 class="title-quote">Je suis un bénévole et je veux aider</h3>
-                </div>
+        <div class="row justify-content-md-center">
+            <div class="col-8">
+                <ol class="list-instructions">
+                    <li>
+                        <a class="under" href="/files/FR.jpg">Imprimer le modèle</a> “liste de course” en format A4 🖨️
+                    </li>
+                    <li>
+                        Partagez-la ou placez-la dans la boite aux lettre de votre voisin 📬
+                    </li>
+                    <li>
+                        Retournez chez vous et discutez avec vos proches autour d’un café. ☕
+                    </li>
+                    <li>
+                        Baladez-vous dans votre rue pour voir qui vous pourriez aider 🚶
+                    </li>
+                    <li>
+                        Récupérez la liste de courses et prévenez votre voisin ! 📝
+                    </li>
+                    <li>
+                        Rendez-vous en magasin et ne dévalisez pas les étagères. 🎒
+                    </li>
+                    <li>
+                        Retournez délivrer les produits devant la porte et sonnez à la porte ! 🚪
+                    </li>
+                    <li>
+                        Mission réussie, merci infiniment pour votre collaboration ! 🚀 💚
+                    </li>
+                    <li class="list-item-instagram">
+                        Partagez une photo sur Facebook avec le #covidsolidarity 📸
+                    </li>
+                </ol>
             </div>
+        </div>
+    </div>
+</section>
 
-            <div class="row">
-                <div class="col">
+<!--<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Instagram feed</h2>
 
-                    <div class="card-deck">
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card-body">
-                                <h4 class="card-title">Suis-je rémunéré pour aider en aide à mon voisin ?</h4>
-                                <p class="card-text">
-                                    Non, nous agissons dans une approche strictement citoyenne et bénévole.
-                                    Mais libre à votre voisin de vous remercier à sa guise s’il le souhaite.
-                                </p>
-                            </div>
-                        </div>
+                TODO
+            </div>
+        </div>
+    </div>
+</section>-->
 
-                        <div class="w-100 d-none d-sm-block d-md-block d-lg-none mb-4"></div>
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Vous avez des questions ? Nous avons les réponses !</h2>
+            </div>
+        </div>
 
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card-body">
-                                <h4 class="card-title">Je ne veux pas avancer de l’argent</h4>
-                                <p class="card-text">
-                                    C’est une condition indispensable pour aider un voisin. Pour alléger votre portefeuille, nous vous invitons à n’acheter que des biens de première nécessité.
-                                </p>
-                            </div>
+        <div class="row">
+            <div class="col text-center">
+                <img class="rounded" src="/assets/img/hero.png" alt="hero">
+                <h3 class="title-quote">"Je suis un bénévole et je veux aider"</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card-deck">
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Suis-je rémunéré pour aider en aide à mon voisin ?</h4>
+                            <p class="card-text">
+                                Non, nous agissons dans une approche strictement citoyenne et bénévole.
+                                Mais libre à votre voisin de vous remercier à sa guise s’il le souhaite.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="card-deck">
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="300">
-                            <div class="card-body">
-                                <h4 class="card-title">Comment déposer les courses au sein d’un immeuble ?</h4>
-                                <p class="card-text">
-                                    Il suffit de prendre contact avec votre voisin pour lui indiquer l’heure à laquelle vous déposerez les courses devant sa porte. N’oubliez pas de respecter les règles d’hygiène.
-                                </p>
-                            </div>
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Je ne souhaite pas avancer de l’argent</h4>
+                            <p class="card-text">
+                                C’est une condition indispensable pour aider un voisin. Pour alléger votre portefeuille,
+                                nous vous invitons à n’acheter que des biens de première nécessité.
+                            </p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="w-100 d-none d-sm-block d-md-block d-lg-none mb-4"></div>
-
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="400">
-                            <div class="card-body">
-                                <h4 class="card-title">Comment vais-je être remboursé ?</h4>
-                                <p class="card-text">
-                                    C’est très simple ! Il suffit d’indiquer votre numéro de compte sur la liste de course que vous rendrez à votre voisin. Pour le bon service rendu, il vous remboursera sans tarder.
-                                </p>
-                            </div>
+                <div class="card-deck">
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Comment déposer les courses au sein d’un immeuble ?</h4>
+                            <p class="card-text">
+                                Il suffit de prendre contact avec votre voisin pour lui indiquer l’heure à laquelle vous
+                                déposerez les courses devant sa porte. N’oubliez pas de respecter les règles d’hygiène.
+                            </p>
                         </div>
                     </div>
 
-                </div>
-            </div>
-
-            <div class="section-spacer"></div>
-
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="300">
-                    <img class="rounded" src="/assets/img/applicant.png" alt="applicant">
-                    <h3 class="title-quote">Je souhaite obtenir de l’aide</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-
-                    <div class="card-deck">
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card-body">
-                                <h4 class="card-title">Est ce que je peux recontacter l’aide-bénévole par la suite?</h4>
-                                <p class="card-text">
-                                    Bien sur ! Le but est de vous faire rencontrer afin de créer une relation de confiance. Vous pouvez donc rappeler l’aide-bénévole quand bon vous semble. Cependant, n’oubliez pas les consignes d’hygiène strictes pour toujours rester en sécurité.
-                                </p>
-                            </div>
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Comment vais-je être remboursé ?</h4>
+                            <p class="card-text">
+                                C’est très simple ! Il suffit d’indiquer votre numéro de compte sur la liste de course
+                                que vous rendrez à votre voisin. Pour le bon service rendu, il vous remboursera sans
+                                tarder.
+                            </p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="w-100 d-none d-sm-block d-md-block d-lg-none mb-4"></div>
+            </div>
+        </div>
 
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="200">
-                            <div class="card-body">
-                                <h4 class="card-title">Comment savoir qui s’occupe de faire mes courses ?</h4>
-                                <p class="card-text">
-                                    Lors de la récupération de la liste de course, l’aide-bénévole vous contactera sur votre numéro de téléphone fixe ou mobile pour vous informer qu’il est en route vers le magasin. Il vous indiquera aussi quand il est sur le chemin du retour.
-                                </p>
-                            </div>
+        <div class="section-spacer"></div>
+
+        <div class="row">
+            <div class="col text-center">
+                <img class="rounded" src="/assets/img/applicant.png" alt="applicant">
+                <h3 class="title-quote">"Je souhaite obtenir de l’aide"</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card-deck">
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Est ce que je peux recontacter l’aide-bénévole par la suite?</h4>
+                            <p class="card-text">
+                                Bien sûr! Le but de cette initiative est que vous vous rencontriez afin de créer une relation de confiance.
+                                Vous pouvez donc rappeler l’aide-bénévole quand bon vous semble. Cependant, n’oubliez
+                                pas les consignes d’hygiène strictes pour toujours rester en sécurité.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="card-deck">
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="300">
-                            <div class="card-body">
-                                <h4 class="card-title">Je n’ai pas la possibilité de faire un versement facilement</h4>
-                                <p class="card-text">
-                                    Vous pouvez demander à un proche de vous aider pour rembourser le bénévole ou télécharger les applications de paiement depuis votre téléphone portable.
-                                </p>
-                            </div>
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Comment savoir qui s’occupe de faire mes courses ?</h4>
+                            <p class="card-text">
+                                Lors de la récupération de la liste de course, l’aide-bénévole vous contactera sur votre
+                                numéro de téléphone fixe ou mobile pour vous informer qu’il est en route vers le
+                                magasin. Il vous indiquera aussi quand il est sur le chemin du retour.
+                            </p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="w-100 d-none d-sm-block d-md-block d-lg-none mb-4"></div>
-
-                        <div class="card card-question" data-aos="fade-up" data-aos-delay="400">
-                            <div class="card-body">
-                                <h4 class="card-title">Quel est le montant maximal que je peux commander ?</h4>
-                                <p class="card-text">
-                                    Comme bon vous semble, mais nous suggérons de ne pas dépasser un montant de 25 à 30€ et de se focaliser sur des biens de première nécessité. Pensez aussi au poids final de votre colis, l’aide bénévole doit pouvoir se déplacer à pied avec.
-                                </p>
-                            </div>
+                <div class="card-deck">
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Je n’ai pas la possibilité de faire un versement facilement</h4>
+                            <p class="card-text">
+                                Vous pouvez demander à un proche de vous aider pour rembourser le bénévole ou
+                                télécharger les applications de paiement depuis votre téléphone portable.
+                            </p>
                         </div>
                     </div>
 
+                    <div class="card card-question">
+                        <div class="card-body">
+                            <h4 class="card-title">Quel est le montant maximal que je peux commander ?</h4>
+                            <p class="card-text">
+                                Comme bon vous semble, mais nous suggérons de ne pas dépasser un montant de 25 à 30€ et
+                                de se focaliser sur des biens de première nécessité. Pensez aussi au poids final de
+                                votre colis, l’aide bénévole doit pouvoir se déplacer à pied avec.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!--<section class="bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>Avec le soutien de</h2>
+<!--<section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Avec le soutien de</h2>
 
-                    TODO
-                </div>
+                TODO
             </div>
         </div>
-    </section>-->
+    </div>
+</section>-->
 
-    <section class="bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center" data-aos="fade-up" data-aos-delay="300">
-                    <h2>Une initiative 100% bénévole et citoyenne</h2>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <p>
-                        Marqué par la tournure des événements et conscients que cette crise nous force à trouver des solutions d’aide pragmatiques, nous avons souhaité par la voie de l’intelligence collective rendre service à la population.
-                    </p>
-
-                    <p>
-                        Un mouvement citoyen et non-lucratif initié en ligne par un groupe d’entrepreneurs et professionnels #BeTech qui permet de créer du lien social dans une démarche bienveillante.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-
-                    <ul class="list-team">
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="100">
-                            <img class="rounded" src="/assets/img/team_1@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="200">
-                            <img class="rounded" src="/assets/img/team_2@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="300">
-                            <img class="rounded" src="/assets/img/team_3@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="400">
-                            <img class="rounded" src="/assets/img/team_4@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="500">
-                            <img class="rounded" src="/assets/img/team_5@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="600">
-                            <img class="rounded" src="/assets/img/team_6@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="700">
-                            <img class="rounded" src="/assets/img/team_7@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="800">
-                            <img class="rounded" src="/assets/img/team_8@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="900">
-                            <img class="rounded" src="/assets/img/team_9@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="1000">
-                            <img class="rounded" src="/assets/img/team_10@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="1100">
-                            <img class="rounded" src="/assets/img/team_11@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="1200">
-                            <img class="rounded" src="/assets/img/team_12@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="1300">
-                            <img class="rounded" src="/assets/img/team_13@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="1400">
-                            <img class="rounded" src="/assets/img/team_14@1x.png" alt="">
-                        </li>
-                        <li class="list-inline-item" data-aos="fade-up" data-aos-delay="1500">
-                            <img class="rounded" src="/assets/img/team_15@1x.png" alt="">
-                        </li>
-                    </ul>
-                </div>
+<section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Une initiative 100% bénévole et citoyenne</h2>
             </div>
         </div>
-    </section>
+
+        <div class="row justify-content-md-center">
+            <div class="col-8 text-center">
+                <p>
+                    Marqué par la tournure des événements et conscients que cette crise nous force à trouver des
+                    solutions d’aide pragmatiques, nous avons souhaité par la voie de l’intelligence collective rendre
+                    service à la population.
+                </p>
+
+                <p>
+                    Un mouvement citoyen et non-lucratif initié en ligne par un groupe d’entrepreneurs et professionnels
+                    #BeTech qui permet de créer du lien social dans une démarche bienveillante.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_1.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_2.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_3.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_4.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_5.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_6.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_7.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_8.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_9.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_10.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_11.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_12.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_13.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_14.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_15.png" alt="...">
+                    </li>
+                    <li class="list-inline-item">
+                        <img class="rounded" src="/assets/img/team_16.png" alt="...">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
