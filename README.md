@@ -125,12 +125,12 @@ Array of orders
 
 Get the list of registered users
 
-##### Params :
-- email
-- password
+#### /orders [GET]
+
+Get the list of available orders
 
 
-Database structure :
+# Database structure :
 
 # User
 
