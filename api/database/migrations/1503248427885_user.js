@@ -19,8 +19,8 @@ class UserSchema extends Schema {
       table.string('lng', 60).nullable();
       table.string('type', 60).nullable();
       table.string('status', 60).nullable();
-      table.string('senior_notes', 256).nullable();
-      table.string('senior_represented_by', 256).nullable();
+      table.string('notes', 256).nullable();
+      table.string('represented_by', 256).nullable();
       table.timestamps();
     })
   }

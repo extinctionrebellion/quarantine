@@ -59,37 +59,130 @@ adonis serve
 
 This app use Next.JS for the front-end App and Adonis for the Api part.
 
-Database structure :
+### Api endpoints
 
-Markers
+#### /register [POST]
+
+Register an user (helper/helped) in the database. This would also send him an email.
+
+##### Params :
+- email*
+- thumb : in base64
+- password*
+- name*
+- phone*
+- surname*
+- address*
+- lat*
+- lng*
+- type : 'helper' (student) or 'helped' (senior)*
+- status : [verified, active]*
+- notes : Notes for the helped person
+- represented_by : fields to add information about who represent the helped person
+
+#### /login [GET]
+
+Login the user (by email, password)
+
+##### Params :
+- email
+- password
+
+#### /me [GET] (to do)
+
+Get all the informations related to the logged in users
+
+##### Params :
 - id
-- phone (private)
-- email (private)
-- name (private)
-- message (public)
-- address (public)
+- username
+- email
+- thumb
+- password
+- name
+- phone
+- surname
+- address
+- lat
+- lng
 - type
 - status
-- creator_id
-- helper_id
+- orders : List of available orders (when user is type helper)
+- requests : List of his requests (when user is type helped)
+
+#### /search [GET]
+
+This will order by distance the available orders to do for the student
+
+##### Params :
 - lat
 - lng
 
-User
-- id
+##### Returns :
+
+Array of orders
+
+#### /users [GET]
+
+Get the list of registered users
+
+##### Params :
 - email
-- password (v2)
+- password
+
+
+Database structure :
+
+# User
+
+- id
+- username
+- email
+- thumb
+- password
+- name
+- phone
+- surname
+- address
+- lat
+- lng
+- type
+- status
+- notes
+- represented_by
+- created_at
+- updated_at
+
+# Order
+
+- id
+- phone
+- name
+- detail
+- email
+- type
+- status
+- helped_id
+- helper_id
+- address
+- lat
+- lng
+- transaction_id
+- transaction_type
+- transaction_status
+- transaction_link
+- created_at
+- updated_at
 
 ### TODOS
 
-- [ ] Define the needed form
-- [ ] Geoloc the address
+- [*] Define the needed form
+- [*] Document Api
+- [*] Geoloc the addresss
 - [ ] Continue the Form for asking help and for help (W.I.P)
 - [ ] Clustering markers
 - [ ] Localization (en|fr|nl)
 - [ ] Add a popover for each markers (need to be discussed)
 - [ ] Cleaning stuff inside separate components
-- [ ] Document Api
 
 ## Contributing
 
@@ -104,7 +197,6 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## Contribute
 The best way to contribute is by offering help to people in your community.
