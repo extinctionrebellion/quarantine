@@ -1,6 +1,21 @@
 #app {}
 
-.app-header {}
+.app-header {
+    .navbar-nav {
+        .nav-item {
+            &.active {
+                .nav-link {
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
+
+            .nav-link {
+                color: $success;
+            }
+        }
+    }
+}
 
 .app-body {}
 
