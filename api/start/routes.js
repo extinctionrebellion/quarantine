@@ -22,6 +22,7 @@ const Mail = use('Mail');
 const Database = use('Database');
 
 Route.on('/').render('welcome');
+Route.on('/dan').render('welcome.dan');
 
 Route.get('/en', ({ antl, view }) => {
   antl.switchLocale('en');
