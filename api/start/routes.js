@@ -21,6 +21,8 @@ const Order = use('App/Models/Order')
 const Mail = use('Mail')
 const Database = use('Database')
 
+Route.on('/').render('welcome');
+
 Route.get('/api/v1/markers', async ({response}) => {
   const items = await Marker.all();
   response.send(items.toJSON());

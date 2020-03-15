@@ -1,20 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Hello Adonis</title>
-  {{ style('style') }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 solidarity</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <section>
-    <div class="logo"></div>
-    <div class="title"></div>
-    <div class="subtitle">
-      <p>AdonisJs simplicity will make you feel confident about your code</p>
-      <p>
-        Don't know where to start? Read the <a href="https://adonisjs.com/docs">documentation</a>.
+<nav>
+  <img src="assets/img/logo.svg" alt="covid-19 solidarity logo">
+  <a href="#" id="button-fr" class="button-language" onclick="changeLanguage('fr')">FR</a>
+  <a href="#" id="button-nl" class="button-language" onclick="changeLanguage('nl')">NL</a>
+  <a href="#" id="button-en" class="button-language" onclick="changeLanguage('en')">EN</a>
+</nav>
+
+<header class="container container-white container-header">
+  <section class="df-center container-txt-general">
+    <div class="container-text">
+      <h1 id="headerTitle">Seul(e) et besoin de livraison à domicile?</h1>
+      <p id="headerDescription">
+        Durant cette crise de covid-19, Covid Solidarity fait
+        appel à des jeunes bénévoles pour venir en aide à des
+        personnes en besoin.
       </p>
     </div>
+    <div class="header-container-button">
+      <button class="button button-green df-center" id="headerButtonRequestHelp">Besoin d’aide? Cliquez
+        ici</button>
+      <button class="button button-white df-center" id="headerButtonProposeHelp">J’aimerais aider</button>
+    </div>
   </section>
+  <section class="df-center header-img-container">
+    <img src="assets/img/header-pic.png" class="header-img" alt="applicant opening the door">
+  </section>
+</header>
+
+<main class="container">
+  <!-- APPLICANTS -->
+  <div class="card">
+    <div class="card-header">
+      <img src="assets/img/applicant.png" alt="applicant">
+      <p class="card-header-txt" id="cardSeniorQuote">« J’ai besoin d’aide »</p>
+    </div>
+    <h2 id="cardSeniorTitle">Quelles étapes faut-il suivre pour se faire aider ?</h2>
+    <ol class="card-txt">
+      <li><b>1.</b><span id="cardsSeniorStepsStepOne"> Inscrivez-vous à travers notre formulaire.</span></li>
+      <li><b>2.</b> <span id="cardsSeniorStepsStepTwo">On vous rappelle au plus vite pour passer votre
+                        commande.</span></li>
+      <li><b>3.</b> <span id="cardsSeniorStepsStepThree">Un jeune aidant dans votre quartier ira faire les
+                        courses pour vous. Il déposera les courses
+                        devant chez vous et vous enverra un SMS à l’arrivée.</span></li>
+    </ol>
+    <button class="button button-green df-center" id="cardsSeniorButton">Besoin d’aide? Cliquez ici</button>
+  </div>
+
+  <!-- HEROES -->
+  <div class="card">
+    <div class="card-header">
+      <img src="assets/img/hero.png" alt="hero">
+      <p class="card-header-txt" id="cardsYoungQuote">« Je veux fournir de l'aide »</p>
+    </div>
+    <h2 id="cardsYoungTitle">Informations concernant l’aide aux personnes en besoin</h2>
+    <ol class="card-txt">
+      <li>
+        <h3 id="cardsYoungSetpsStepOneTitle">1.Pourquoi est-ce que je voudrais aider ?</h3>
+        <p id="cardsYoungSetpsStepOneText">
+          Tu as un peu de temps ? Des personnes sont en besoin, c’est l’occasion de les aider! Ensemble,
+          on
+          peut battre le covid-19.
+        </p>
+      </li>
+      <li>
+        <h3 id="cardsYoungSetpsStepTwoTitle">2. Comment est-ce que ça se passe pour aider ?</h3>
+        <p id="cardsYoungSetpsStepTwoText">
+          Pas besoin de beaucoup de temps ou de permis de conduire, il suffit de remplir le formulaire et
+          de respecter quelques règles d’hygiène !
+        </p>
+      </li>
+
+    </ol>
+    <button class="button button-white df-center" id="cardsYoungButton">Je veux aider</button>
+  </div>
+</main>
+
+<section class="container container-white df-center team">
+  <h2 id="teamTitle">Qui sommes-nous?</h2>
+  <p id="teamDescription">
+    Une communauté d'entrepreneurs et professionnels #tech désireux d’apporter leur aide rapide via la
+    technologie. Un mouvement non-lucratif qui permet de créer du lien social dans une démarche de calme et de
+    bienveillance.
+  </p>
+</section>
+
+<footer>
+  <p>
+    ❤️ Made with love to beat Covid-19
+  </p>
+</footer>
+
+<script src="assets/txt/en.js"></script>
+<script src="assets/txt/fr.js"></script>
+<script src="assets/txt/nl.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
