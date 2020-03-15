@@ -13,24 +13,47 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160690896-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-160690896-1');
+  </script>
 </head>
 <body>
 <div id="app">
-  <nav>
-    <img src="/assets/img/logo.svg" alt="covid-19 solidarity logo">
-    <a href="/" id="button-fr" class="button-language" onclick="changeLanguage('fr')">FR</a>
-    <a href="/nl" id="button-nl" class="button-language" onclick="changeLanguage('nl')">NL</a>
-    <a href="/en" id="button-en" class="button-language" onclick="changeLanguage('en')">EN</a>
-  </nav>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/"><img src="/assets/img/logo.svg" alt="covid-19 solidarity logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="my-2 my-lg-0" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">FR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nl">NL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/en">EN</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <header class="container container-white container-header">
-    <section class="df-center container-txt-general">
+    <section class="col-xs-6">
       <div class="container-text">
-        <h1 id="headerTitle">Seul(e) et besoin de livraison à domicile?</h1>
+        <h1 id="headerTitle">Envie de donner un coup de main à votre voisin ?</h1>
         <p id="headerDescription">
-          Durant cette crise de covid-19, Covid Solidarity fait
-          appel à des jeunes bénévoles pour venir en aide à des
-          personnes en besoin.
+          Rejoignez notre mouvement et proposez à votre voisin
+          de faire ses courses de première nécessité.
         </p>
       </div>
       <div class="header-container-button">
@@ -47,9 +70,9 @@
   <main class="container">
 
     <section class="container df-center">
-      <h2>Répandez la solidarité, pas le virus!</h2>
-      <p>Face à l’épidémie de Covid-19, l’une des approches pour éviter la propagation est l’isolement. Mais comment faire pour s’alimenter et se fournir en produits de base en évitant de sortir de chez soi, l’option d’entraide à la livraison à domicile chez Covid solidarity nous a sembler la solution pour les personnes seules ou dans le besoin.
-        Covid solidarity veut aider les personnes... </p>
+      <h2>Répandons la solidarité, pas le virus</h2>
+      <p>Pour endiguer rapidement la propagation du virus, le gouvernement et le milieu médical recommandent fortement à la population de rester à domicile. Mais comment faire pour s’alimenter et se fournir en produits de première nécessité tout en restant chez soi ?
+      </p>
     </section>
 
     <!-- APPLICANTS -->
@@ -106,9 +129,14 @@
       technologie. Un mouvement non-lucratif qui permet de créer du lien social dans une démarche de calme et de
       bienveillance.
     </p>
+    <div>
+      <img src="..." alt="..." class="rounded">
+    </div>
   </section>
 
-  <footer>
+
+
+  <footer class="text-center">
     <p>
       ❤️ Made with love to beat Covid-19
     </p>
