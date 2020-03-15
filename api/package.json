@@ -5,6 +5,9 @@
   "description": "Quarantine Api",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "start": "node server.js",
     "test": "node ace test",
     "fdev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -33,7 +36,7 @@
     "@adonisjs/mail": "^3.0.10",
     "@adonisjs/session": "^1.0.27",
     "@adonisjs/shield": "^1.0.8",
-    "bootstrap-sass": "^3.4.1",
+    "bootstrap": "^4.4.1",
     "laravel-mix": "^5.0.1",
     "mysql": "^2.18.1",
     "pg": "^7.18.2",

@@ -154,8 +154,8 @@ changeLanguage(languageNavigator);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Volumes/DATA/_SERVER/quarantineapp/api/resources/assets/js/app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! /Volumes/DATA/_SERVER/quarantineapp/api/resources/assets/sass/app.scss */"./resources/assets/sass/app.scss");
+__webpack_require__(/*! /Users/monkeymonk/Works/quarantine/api/resources/assets/js/app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! /Users/monkeymonk/Works/quarantine/api/resources/assets/sass/app.scss */"./resources/assets/sass/app.scss");
 
 
 /***/ })

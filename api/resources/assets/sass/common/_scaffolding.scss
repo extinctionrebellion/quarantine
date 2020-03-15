@@ -1,0 +1,16 @@
+a,
+input,
+textarea,
+button {
+    transition: all 250ms ease-out;
+}
+
+// firefox: remove dotted outline on focusable elements
+::-moz-focus-inner {
+    border: 0;
+}
+
+object,
+embed {
+    outline: 0;
+}

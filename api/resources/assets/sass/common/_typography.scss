@@ -1,0 +1,71 @@
+//@font-face {
+//    font-family: 'HelveticaNeueLTStd';
+//    src: url('../fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTStd-Bd.otf') format('opentype'),
+//    url('../fonts/HelveticaNeueLTStd-Bd.woff') format('woff'), url('../fonts/HelveticaNeueLTStd-Bd.ttf') format('truetype'), url('../fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+//    font-weight: bold;
+//    font-style: normal;
+//}
+
+html {
+    font-size: .625em; /* fallback IE8+ */
+    font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    //font-family: 'HelveticaNeueLTStd';
+    font-size: 2rem;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+::selection {
+    background-color: $danger;
+    color: #fff;
+}
+
+// Titles
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: bold;
+    margin-bottom: .6em;
+    text-transform: uppercase;
+
+    span {
+        color: $dark;
+        //display: block;
+    }
+}
+
+
+h1, .h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+}
+
+h2, .h2 {
+    font-size: 3rem;
+    line-height: 3.3rem;
+}
+
+h3, .h3 {
+    font-size: 2.2rem;
+}
+
+h4, .h4 {
+}
+
+h5, .h5 {
+}
+
+h6, .h6 {
+}
+
+// Paragraphs
+p, .p {
+    a:not(.btn) { // Increase clickable area on links / http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/
+        margin: -.5em;
+        padding: .5em;
+        position: relative;
+    }
+}

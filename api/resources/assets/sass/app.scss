@@ -1,376 +1,396 @@
+// base
+@import "common/variables";
+@import "common/mixins";
 
-/* * --------- GENERAL -------- * */
-body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  background-color: #f4f4f4;
-}
-h1 {
-  font-size: 42px;
-  color: #171717;
-  margin: 0;
-}
-ul {
-  padding: 0;
-  list-style: none;
-}
-.df-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+// plugins
+@import "../plugins/bootstrap/bootstrap";
 
-/* * --------- NAV -------- * */
-nav {
-  background-color: #fff;
-  padding: 2% 5%;
-  display: flex;
-  align-items: center;
-}
-#button-fr {
-  margin-left: auto;
-}
-.button-language {
-  margin: 0 5px;
-  color: #44b244;
-}
+// common
+@import "common/scaffolding";
+@import "common/typography";
 
-/* * --------- COMPONENTS -------- * */
-.container {
-  /* border: 1px solid red; */
-  display: flex;
-  padding: 78px 10px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border-bottom: 20px;
-}
-.container-white {
-  background: #ffffff;
-}
-.button {
-  border-radius: 24px;
-  width: 272px;
-  height: 48px;
-  border: 0;
-  margin: 2px;
-  font-weight: 700;
-  font-size: 16px;
-}
-.button-green {
-  background-color: #44b244;
-  color: white;
-}
-.button-white {
-  font-weight: 700;
-  border: 1px solid #44b244;
-  background-color: #fff;
-}
+// components
+@import "components/buttons";
 
-/* * --------- HEADER -------- * */
-.container-header {
-  display: flex;
-  padding: 77px 10px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border-bottom: 20px;
-}
+// layouts
+@import "layouts/common";
 
-.header-img {
-  width: 580px;
-  height: 387px;
-}
-.container-txt-general {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.container-text {
-  display: flex;
-  flex-direction: column;
-  max-width: 579px;
-}
-.header-container-button {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 
-/* * --------- CARDS -------- * */
 
-.card {
-  width: 35%;
-  margin: 30px 0;
-  background: #fff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #d1d1d1;
-  border-radius: 8px;
-}
-.card-faq {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
-.h2Title {
-  color: #171717;
-  font-size: 38px;
-  font-weight: 800;
-  line-height: 48px;
-  text-align: center;
-  width: 575px;
-}
 
-.card-text {
-  padding: 12px 0px;
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-}
-.card-header img {
-  margin-right: 20px;
-}
-.card-header-txt {
-  color: #171717;
-  font-family: Lato;
-  font-size: 22px;
-  font-style: italic;
-}
-.card h2 {
-  font-weight: 800;
-  line-height: 36px;
-  font-size: 28px;
-}
-.card ol li {
-  margin: 15px 0;
-  list-style-type: none;
-}
-.card button {
-  width: 95%;
-  margin: 0 auto;
-}
-
-/* *--------- Explanation --------- * */
-
-.container-explanation {
-  padding: 88px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.ul-explanation {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.li-p-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 50px;
-}
-
-.howWorks {
-  color: #171717;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  width: 230px;
-  text-align: center;
-}
-
-.container-collaborators {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 900px;
-}
-
-.img-logo {
-  width: 77px;
-  height: 77px;
-  margin: 39px 50px;
-}
-
-/* *--------- Form --------- * */
-
-.container-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-form {
-  background-color: #f4f4f4;
-  padding: 20px 0px;
-}
-
-.ul-form {
-  padding: 0;
-}
-
-.pText {
-  color: #171717;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  width: 328px;
-  text-align: center;
-}
-
-input[type="text"],
-select {
-  width: 290px;
-  height: 48px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-/* * ---------FAQ ---------- * */
-
-.container-faq {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.container-faq-team {
-  padding: 88px 0px;
-}
-.container-title-faq {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* * --------- TEAM -------- * */
-
-.team h2 {
-  font-size: 30px;
-}
-.team p {
-  max-width: 45%;
-  text-align: center;
-  font-size: 24px;
-  line-height: 39px;
-}
-
-.container-founders {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
-}
-
-.img-founders {
-  background-size: 100%;
-  border-radius: 100%;
-  width: 72px;
-  height: 72px;
-  margin: 20px 32px;
-}
-
-/* * --------- FOOTER -------- * */
-footer p {
-  font-family: 18px;
-  padding: 30px 0;
-  text-align: center;
-}
-
-/* * --------- MEDIA QUERIES -------- * */
-@media screen and (max-width: 1160px) {
-  /* * ----- HEADER ----- * */
-  h1 {
-    text-align: center;
-    margin: 0 10px;
-    margin-bottom: 16px;
-  }
-  .header-container-button {
-    justify-content: center;
-    margin-bottom: 40px;
-    margin: 0 16px;
-    margin-bottom: 16px;
-  }
-  .header-container-button .button {
-    margin-bottom: 10px;
-    width: 95%;
-  }
-  .container-txt-general {
-    align-items: center;
-  }
-  .container-text p {
-    text-align: center;
-    font-size: 18px;
-    margin: 0 16px;
-    margin-bottom: 16px;
-  }
-  .header-img-container {
-    display: none;
-  }
-  /* * ----- CARDS ----- * */
-  main {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .card {
-    width: 85%;
-  }
-  .card-header {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .card h2 {
-    text-align: center;
-  }
-  .card-txt {
-    padding: 0;
-  }
-
-  /**/
-
-  /* * ----- TEAM ----- * */
-  .team p {
-    font-size: 24px;
-    max-width: 90%;
-    padding: 10px 0;
-  }
-}
-
-.message-section h2{
-  color: #171717;
-  font-family: Inter;
-  font-size: 38px;
-  font-weight: 800;
-  line-height: 46px;
-  text-align: center;
-}
-
-/* SECTION COLLABORATORS */
-.collaborators-section{
-  text-align: center;
-}
+///* * --------- GENERAL -------- * */
+//body {
+//  font-family: "Inter", sans-serif;
+//  margin: 0;
+//  background-color: #f4f4f4;
+//}
+//h1 {
+//  font-size: 42px;
+//  color: #171717;
+//  margin: 0;
+//}
+//ul {
+//  padding: 0;
+//  list-style: none;
+//}
+//.df-center {
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//}
+//
+///* * --------- NAV -------- * */
+//nav {
+//  background-color: #fff;
+//  padding: 2% 5%;
+//  display: flex;
+//  align-items: center;
+//}
+//#button-fr {
+//  margin-left: auto;
+//}
+//.button-language {
+//  margin: 0 5px;
+//  color: #44b244;
+//}
+//
+///* * --------- COMPONENTS -------- * */
+//.container {
+//  /* border: 1px solid red; */
+//  display: flex;
+//  padding: 78px 10px;
+//  display: flex;
+//  justify-content: space-evenly;
+//  flex-wrap: wrap;
+//  border-bottom: 20px;
+//}
+//.container-white {
+//  background: #ffffff;
+//}
+//.button {
+//  border-radius: 24px;
+//  width: 272px;
+//  height: 48px;
+//  border: 0;
+//  margin: 2px;
+//  font-weight: 700;
+//  font-size: 16px;
+//}
+//.button-green {
+//  background-color: #44b244;
+//  color: white;
+//}
+//.button-white {
+//  font-weight: 700;
+//  border: 1px solid #44b244;
+//  background-color: #fff;
+//}
+//
+///* * --------- HEADER -------- * */
+//.container-header {
+//  display: flex;
+//  padding: 77px 10px;
+//  display: flex;
+//  justify-content: space-evenly;
+//  flex-wrap: wrap;
+//  border-bottom: 20px;
+//}
+//
+//.header-img {
+//  width: 580px;
+//  height: 387px;
+//}
+//.container-txt-general {
+//  display: flex;
+//  align-items: flex-start;
+//  justify-content: center;
+//}
+//.container-text {
+//  display: flex;
+//  flex-direction: column;
+//  max-width: 579px;
+//}
+//.header-container-button {
+//  display: flex;
+//  flex-direction: row;
+//  flex-wrap: wrap;
+//}
+//
+///* * --------- CARDS -------- * */
+//
+//.card {
+//  width: 35%;
+//  margin: 30px 0;
+//  background: #fff;
+//  padding: 20px;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  border: 1px solid #d1d1d1;
+//  border-radius: 8px;
+//}
+//.card-faq {
+//  display: flex;
+//  justify-content: space-around;
+//  flex-wrap: wrap;
+//}
+//
+//.h2Title {
+//  color: #171717;
+//  font-size: 38px;
+//  font-weight: 800;
+//  line-height: 48px;
+//  text-align: center;
+//  width: 575px;
+//}
+//
+//.card-text {
+//  padding: 12px 0px;
+//}
+//
+//.card-header {
+//  display: flex;
+//  align-items: center;
+//}
+//.card-header img {
+//  margin-right: 20px;
+//}
+//.card-header-txt {
+//  color: #171717;
+//  font-family: Lato;
+//  font-size: 22px;
+//  font-style: italic;
+//}
+//.card h2 {
+//  font-weight: 800;
+//  line-height: 36px;
+//  font-size: 28px;
+//}
+//.card ol li {
+//  margin: 15px 0;
+//  list-style-type: none;
+//}
+//.card button {
+//  width: 95%;
+//  margin: 0 auto;
+//}
+//
+///* *--------- Explanation --------- * */
+//
+//.container-explanation {
+//  padding: 88px 0px;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.ul-explanation {
+//  display: flex;
+//  flex-wrap: wrap;
+//  align-items: center;
+//  justify-content: space-around;
+//}
+//
+//.li-p-img {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//  padding: 24px 50px;
+//}
+//
+//.howWorks {
+//  color: #171717;
+//  font-size: 18px;
+//  font-weight: 400;
+//  line-height: 24px;
+//  width: 230px;
+//  text-align: center;
+//}
+//
+//.container-collaborators {
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-around;
+//  flex-wrap: wrap;
+//  width: 100%;
+//  max-width: 900px;
+//}
+//
+//.img-logo {
+//  width: 77px;
+//  height: 77px;
+//  margin: 39px 50px;
+//}
+//
+///* *--------- Form --------- * */
+//
+//.container-form {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.nav-form {
+//  background-color: #f4f4f4;
+//  padding: 20px 0px;
+//}
+//
+//.ul-form {
+//  padding: 0;
+//}
+//
+//.pText {
+//  color: #171717;
+//  font-size: 18px;
+//  font-weight: 400;
+//  line-height: 24px;
+//  width: 328px;
+//  text-align: center;
+//}
+//
+//input[type="text"],
+//select {
+//  width: 290px;
+//  height: 48px;
+//  padding: 12px 20px;
+//  margin: 8px 0;
+//  display: inline-block;
+//  border: 1px solid #ccc;
+//  border-radius: 6px;
+//  box-sizing: border-box;
+//}
+//
+///* * ---------FAQ ---------- * */
+//
+//.container-faq {
+//  display: flex;
+//  flex-wrap: wrap;
+//  align-items: center;
+//  justify-content: space-around;
+//}
+//
+//.container-faq-team {
+//  padding: 88px 0px;
+//}
+//.container-title-faq {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+///* * --------- TEAM -------- * */
+//
+//.team h2 {
+//  font-size: 30px;
+//}
+//.team p {
+//  max-width: 45%;
+//  text-align: center;
+//  font-size: 24px;
+//  line-height: 39px;
+//}
+//
+//.container-founders {
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-around;
+//  align-items: center;
+//  width: 100%;
+//  max-width: 900px;
+//}
+//
+//.img-founders {
+//  background-size: 100%;
+//  border-radius: 100%;
+//  width: 72px;
+//  height: 72px;
+//  margin: 20px 32px;
+//}
+//
+///* * --------- FOOTER -------- * */
+//footer p {
+//  font-family: 18px;
+//  padding: 30px 0;
+//  text-align: center;
+//}
+//
+///* * --------- MEDIA QUERIES -------- * */
+//@media screen and (max-width: 1160px) {
+//  /* * ----- HEADER ----- * */
+//  h1 {
+//    text-align: center;
+//    margin: 0 10px;
+//    margin-bottom: 16px;
+//  }
+//  .header-container-button {
+//    justify-content: center;
+//    margin-bottom: 40px;
+//    margin: 0 16px;
+//    margin-bottom: 16px;
+//  }
+//  .header-container-button .button {
+//    margin-bottom: 10px;
+//    width: 95%;
+//  }
+//  .container-txt-general {
+//    align-items: center;
+//  }
+//  .container-text p {
+//    text-align: center;
+//    font-size: 18px;
+//    margin: 0 16px;
+//    margin-bottom: 16px;
+//  }
+//  .header-img-container {
+//    display: none;
+//  }
+//  /* * ----- CARDS ----- * */
+//  main {
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//  }
+//  .card {
+//    width: 85%;
+//  }
+//  .card-header {
+//    flex-wrap: wrap;
+//    align-items: center;
+//    justify-content: center;
+//  }
+//  .card h2 {
+//    text-align: center;
+//  }
+//  .card-txt {
+//    padding: 0;
+//  }
+//
+//  /**/
+//
+//  /* * ----- TEAM ----- * */
+//  .team p {
+//    font-size: 24px;
+//    max-width: 90%;
+//    padding: 10px 0;
+//  }
+//}
+//
+//.message-section h2{
+//  color: #171717;
+//  font-family: Inter;
+//  font-size: 38px;
+//  font-weight: 800;
+//  line-height: 46px;
+//  text-align: center;
+//}
+//
+///* SECTION COLLABORATORS */
+//.collaborators-section{
+//  text-align: center;
+//}

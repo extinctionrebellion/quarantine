@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Covid-19 solidarity</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    @include('parts.favicons')
+    @include('parts.meta')
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160690896-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-160690896-1');
+    </script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    <div id="app"  role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+        <header class="app-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            @section('navigation')
+                @include('parts.navigation')
+            @endsection
+        </header>
+
+        <div class="app-body">
+            @!section('content')
+        </div>
+
+        <footer class="app-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+            @section('footer')
+                @include('parts.footer')
+            @endsection
+        </footer>
+    </div>
+</body>
