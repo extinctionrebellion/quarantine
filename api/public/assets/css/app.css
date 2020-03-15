@@ -10635,6 +10635,10 @@ p a:not(.btn),
   height: 120px;
 }
 
+.app-body .card-deck {
+  margin-bottom: 2em;
+}
+
 .app-footer {
   background-color: #e9ecef;
 }
