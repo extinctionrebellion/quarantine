@@ -1,3 +1,5 @@
+@import url('https://rsms.me/inter/inter.css');
+
 //@font-face {
 //    font-family: 'HelveticaNeueLTStd';
 //    src: url('../fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueLTStd-Bd.otf') format('opentype'),
@@ -14,7 +16,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    //font-family: 'HelveticaNeueLTStd';
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: normal;
     text-rendering: optimizeLegibility;
