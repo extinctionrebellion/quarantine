@@ -45,11 +45,15 @@ Route.get('/api/v1/match', async ({request, response}) => {
 });
 
 Route.get('/api/v1/search', async ({request, response}) => {
-  const items = await Database.raw('SELECT *, (acos(sin(?) * sin(lat) + cos(?) * cos(lat) * cos(lng - (?))) * 6371) as distance from markers WHERE lat IS NOT NULL ORDER BY distance ASC ', [request.input('lat'), request.input('lat'), request.input('lng')]);
+  const items = await Database.raw('SELECT *, (acos(sin(?) * sin(lat) + cos(?) * cos(lat) * cos(lng - (?))) * 6371) as distance from orders WHERE lat IS NOT NULL ORDER BY distance ASC ', [request.input('lat'), request.input('lat'), request.input('lng')]);
   response.send(items[0]);
 });
 
 Route.post('/api/v1/markers', 'MarkerController.store');
+
+Route.post('/api/v1/register', 'UserController.store');
+
+Route.get('/api/v1/login', 'UserController.login');
 
 Route.get('/api/v1/users', async ({response}) => {
   const items = await User.query().with('orders').with('requests').fetch();
