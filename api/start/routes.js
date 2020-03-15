@@ -14,12 +14,12 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
-const Marker = use('App/Models/Marker')
-const User = use('App/Models/User')
-const Order = use('App/Models/Order')
-const Mail = use('Mail')
-const Database = use('Database')
+const Route = use('Route');
+const Marker = use('App/Models/Marker');
+const User = use('App/Models/User');
+const Order = use('App/Models/Order');
+const Mail = use('Mail');
+const Database = use('Database');
 
 Route.on('/').render('welcome');
 
@@ -56,6 +56,11 @@ Route.post('/api/v1/markers', 'MarkerController.store');
 Route.post('/api/v1/register', 'UserController.store');
 
 Route.get('/api/v1/login', 'UserController.login');
+
+Route.get('/api/v1/me', async ({auth, response}) => {
+  const user = await auth;
+  response.send(user.toJSON())
+});
 
 Route.get('/api/v1/users', async ({response}) => {
   const items = await User.query().with('orders').with('requests').fetch();
