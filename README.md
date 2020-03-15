@@ -175,9 +175,10 @@ Get the list of available orders
 
 ### TODOS
 
-- [*] Define the needed form
-- [*] Document Api
-- [*] Geoloc the addresss
+- [x] Define the needed form
+- [x] Document Api
+- [x] Geoloc the addresss
+- [ ] Integrate front end page and design
 - [ ] Continue the Form for asking help and for help (W.I.P)
 - [ ] Clustering markers
 - [ ] Localization (en|fr|nl)
