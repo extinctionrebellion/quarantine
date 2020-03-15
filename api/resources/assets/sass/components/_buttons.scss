@@ -8,6 +8,12 @@ $btn-padding-y: 30px;
     padding: $btn-padding-x $btn-padding-y;
 }
 
+.btn-mobile-block {
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+}
+
 //.button {
 //  border-radius: 24px;
 //  width: 272px;

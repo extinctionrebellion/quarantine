@@ -10542,6 +10542,13 @@ body {
   margin-top: 1em;
 }
 
+@media (max-width: 767.98px) {
+  .title-quote {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
 h1,
 .h1,
 h2,
@@ -10580,6 +10587,14 @@ h1,
   line-height: 1.286em;
 }
 
+@media (max-width: 767.98px) {
+  h1,
+  .h1 {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+
 h2,
 .h2 {
   font-size: 38px;
@@ -10587,10 +10602,26 @@ h2,
   line-height: 1.211em;
 }
 
+@media (max-width: 767.98px) {
+  h2,
+  .h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+
 h3,
 .h3 {
   font-size: 24px;
   font-size: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+  h3,
+  .h3 {
+    font-size: 16px;
+    font-size: 1rem;
+  }
 }
 
 p,
@@ -10627,6 +10658,12 @@ a.link-facebook:hover {
   border-radius: 24px;
   font-size: 16px;
   padding: 10px 30px;
+}
+
+@media (max-width: 767.98px) {
+  .btn-mobile-block {
+    display: block;
+  }
 }
 
 .card-question {
@@ -10708,9 +10745,9 @@ a.link-facebook:hover {
 
 .list-instructions li::after {
   background-color: #44b144;
+  bottom: 3px;
   content: "";
   left: -22px;
-  height: 15px;
   top: 35px;
   width: 2px;
 }
