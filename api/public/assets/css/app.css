@@ -10607,10 +10607,112 @@ p a:not(.btn),
   position: relative;
 }
 
+a {
+  color: #44b144;
+}
+
+a:hover {
+  color: #2f7a2f;
+}
+
+a.link-facebook {
+  color: #4267b2;
+}
+
+a.link-facebook:hover {
+  color: #2d477a;
+}
+
 .btn {
   border-radius: 24px;
   font-size: 16px;
   padding: 10px 30px;
+}
+
+.card-question {
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.card-question .card-body .card-title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding-left: 30px;
+  position: relative;
+}
+
+.card-question .card-body .card-title::before {
+  background-color: #44b144;
+  border-radius: 50%;
+  color: #fff;
+  content: "?";
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: 22px;
+  left: 0;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  width: 22px;
+}
+
+.list-instructions {
+  counter-reset: instructions;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 35px;
+}
+
+.list-instructions li {
+  padding-bottom: 25px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.list-instructions li.list-item-instagram::before {
+  background-image: url(/assets/img/240px-Instagram.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  content: "";
+}
+
+.list-instructions li:last-child::after {
+  display: none;
+}
+
+.list-instructions li::after,
+.list-instructions li::before {
+  display: block;
+  position: absolute;
+}
+
+.list-instructions li::before {
+  background-color: #44b144;
+  border-radius: 50%;
+  color: #fff;
+  content: counter(instructions);
+  counter-increment: instructions;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 28px;
+  left: -35px;
+  line-height: 28px;
+  text-align: center;
+  top: 2px;
+  width: 28px;
+}
+
+.list-instructions li::after {
+  background-color: #44b144;
+  content: "";
+  left: -22px;
+  height: 15px;
+  top: 35px;
+  width: 2px;
 }
 
 .app-header .navbar-nav .nav-item.active .nav-link {
@@ -10641,5 +10743,7 @@ p a:not(.btn),
 
 .app-footer {
   background-color: #e9ecef;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
