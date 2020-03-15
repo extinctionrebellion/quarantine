@@ -10757,6 +10757,10 @@ a.link-facebook:hover {
   margin-bottom: 10px;
 }
 
+.app-header .navbar-nav {
+  flex-direction: row;
+}
+
 .app-header .navbar-nav .nav-item.active .nav-link {
   color: #000;
   text-decoration: underline;
@@ -10764,6 +10768,8 @@ a.link-facebook:hover {
 
 .app-header .navbar-nav .nav-item .nav-link {
   color: #44b144;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
 
 .app-header .navbar-nav .nav-item .nav-link:hover {
