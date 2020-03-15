@@ -23,6 +23,16 @@ const Database = use('Database');
 
 Route.on('/').render('welcome');
 
+Route.get('/en', ({ antl, view }) => {
+  antl.switchLocale('en');
+  return view.render('welcome');
+});
+
+Route.get('/nl', ({ antl, view }) => {
+  antl.switchLocale('nl');
+  return view.render('welcome');
+});
+
 Route.get('/api/v1/markers', async ({response}) => {
   const items = await Marker.all();
   response.send(items.toJSON());
