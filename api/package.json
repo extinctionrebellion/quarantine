@@ -33,12 +33,15 @@
     "@adonisjs/mail": "^3.0.10",
     "@adonisjs/session": "^1.0.27",
     "@adonisjs/shield": "^1.0.8",
+    "bootstrap-sass": "^3.4.1",
     "laravel-mix": "^5.0.1",
     "mysql": "^2.18.1",
     "pg": "^7.18.2",
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.0.1",
     "sass": "^1.26.3",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.42.0",

@@ -3,13 +3,18 @@
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 h1 {
   font-size: 42px;
   color: #171717;
   margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
 
 .df-center {
@@ -34,7 +39,7 @@ nav {
 
 .button-language {
   margin: 0 5px;
-  color: #44B244;
+  color: #44b244;
 }
 
 /* * --------- COMPONENTS -------- * */
@@ -42,7 +47,7 @@ nav {
 .container {
   /* border: 1px solid red; */
   display: flex;
-  padding: 10px;
+  padding: 78px 10px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -50,7 +55,7 @@ nav {
 }
 
 .container-white {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .button {
@@ -61,24 +66,28 @@ nav {
   margin: 2px;
   font-weight: 700;
   font-size: 16px;
-  padding: 25px;
 }
 
 .button-green {
-  background-color: #44B244;
+  background-color: #44b244;
   color: white;
 }
 
 .button-white {
   font-weight: 700;
-  border: 1px solid #44B244;
+  border: 1px solid #44b244;
   background-color: #fff;
 }
 
 /* * --------- HEADER -------- * */
 
 .container-header {
-  padding: 70px 0;
+  display: flex;
+  padding: 77px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-bottom: 20px;
 }
 
 .header-img {
@@ -109,14 +118,32 @@ nav {
 .card {
   width: 35%;
   margin: 30px 0;
-  min-height: 600px;
   background: #fff;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #D1D1D1;
+  border: 1px solid #d1d1d1;
   border-radius: 8px;
+}
+
+.card-faq {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.h2Title {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: center;
+  width: 575px;
+}
+
+.card-text {
+  padding: 12px 0px;
 }
 
 .card-header {
@@ -151,11 +178,115 @@ nav {
   margin: 0 auto;
 }
 
-/* * --------- TEAM -------- * */
+/* *--------- Explanation --------- * */
 
-.team {
-  padding: 150px 0;
+.container-explanation {
+  padding: 88px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.ul-explanation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.li-p-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 50px;
+}
+
+.howWorks {
+  color: #171717;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 230px;
+  text-align: center;
+}
+
+.container-collaborators {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+.img-logo {
+  width: 77px;
+  height: 77px;
+  margin: 39px 50px;
+}
+
+/* *--------- Form --------- * */
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-form {
+  background-color: #f4f4f4;
+  padding: 20px 0px;
+}
+
+.ul-form {
+  padding: 0;
+}
+
+.pText {
+  color: #171717;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 328px;
+  text-align: center;
+}
+
+input[type=text],
+select {
+  width: 290px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* * ---------FAQ ---------- * */
+
+.container-faq {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-faq-team {
+  padding: 88px 0px;
+}
+
+.container-title-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* * --------- TEAM -------- * */
 
 .team h2 {
   font-size: 30px;
@@ -168,10 +299,26 @@ nav {
   line-height: 39px;
 }
 
+.container-founders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.img-founders {
+  background-size: 100%;
+  border-radius: 100%;
+  width: 72px;
+  height: 72px;
+  margin: 20px 32px;
+}
+
 /* * --------- FOOTER -------- * */
 
 footer p {
-  font-family: AppleColorEmoji;
   font-family: 18px;
   padding: 30px 0;
   text-align: center;
@@ -241,6 +388,8 @@ footer p {
     padding: 0;
   }
 
+  /**/
+
   /* * ----- TEAM ----- * */
 
   .team p {
@@ -248,5 +397,20 @@ footer p {
     max-width: 90%;
     padding: 10px 0;
   }
+}
+
+.message-section h2 {
+  color: #171717;
+  font-family: Inter;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 46px;
+  text-align: center;
+}
+
+/* SECTION COLLABORATORS */
+
+.collaborators-section {
+  text-align: center;
 }
 

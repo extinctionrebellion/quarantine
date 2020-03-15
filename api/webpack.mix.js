@@ -11,8 +11,25 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.browserSync('localhost:3333', {
+  files: [
+    'app/**/*',
+    'app/*',
+    'public/**/*',
+    'resources/views/**/*',
+    'resources/views/*',
+    'resources/locales/**/*',
+    'resources/locales/*',
+    'start/**/*',
+    'start/*',
+  ],
+});
+
+mix.setPublicPath('./public');
+
 mix.js('resources/assets/js/app.js', 'public/assets/js/app.js')
   .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css');
+
 
 // Full API
 // mix.js(src, output);
