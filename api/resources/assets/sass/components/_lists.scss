@@ -49,9 +49,9 @@
 
         &::after {
             background-color: $success;
+            bottom: 3px;
             content: '';
             left: -22px;
-            height: 15px;
             top: 35px;
             width: 2px;
         }
