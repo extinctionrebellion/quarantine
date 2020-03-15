@@ -10532,6 +10532,16 @@ body {
   color: #fff;
 }
 
+.title-quote {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 h1,
 .h1,
 h2,
@@ -10610,6 +10620,19 @@ p a:not(.btn),
 
 .app-header .navbar-nav .nav-item .nav-link {
   color: #44b144;
+}
+
+.app-header .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+}
+
+.app-body section {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.app-body .section-spacer {
+  height: 120px;
 }
 
 .app-footer {

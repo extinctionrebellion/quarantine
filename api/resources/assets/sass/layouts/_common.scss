@@ -12,12 +12,25 @@
 
             .nav-link {
                 color: $success;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
 }
 
-.app-body {}
+.app-body {
+    section {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    .section-spacer {
+        height: 120px;
+    }
+}
 
 .app-footer {
     background-color: $gray-200;
