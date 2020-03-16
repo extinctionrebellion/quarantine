@@ -1,9 +1,4 @@
-import React, {useEffect, useState} from "react";
-import GoogleMapReact from 'google-map-react';
-import {Favorite, AddAlert, AccessibilityNew} from '@material-ui/icons';
-import {AppBar, Button,  IconButton, Modal,  Popover, TextField, Typography, Toolbar} from "@material-ui/core";
-import {makeStyles} from '@material-ui/core/styles';
-import {Form} from '../components';
+import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import axios from 'axios';
 import GeolocInput from "../components/GeolocInput";
 
@@ -51,50 +46,22 @@ function getModalStyle() {
   };
 }
 
-const QMarker = (props) =>  {
+const QMarker = (props) => {
 
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState();
-
-  const handleClick = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   let item = props.item;
 
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
-
-  return (<div id={'marker-'+item.id}>
-    {props.children}
+  return (
+    <Marker latitude={props.lat} longitude={props.lng} offsetLeft={-20} offsetTop={-10}>
     <IconButton
-      aria-owns={open ? 'mouse-over-popover' : undefined}
       aria-haspopup="true"
-      onClick={handleClick}
+        onClick={() => props.onClick(item)}
     >
       {props.item.type === 'quarantine' ? <AccessibilityNew></AccessibilityNew> : <Favorite></Favorite>}
     </IconButton>
-    <Popover
-      id={id}
-      open={open}
-      anchorEl={anchorEl}
-      onClose={handleClose}
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'center',
-      }}
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'center',
-      }}
-    >
-      <Typography className={classes.typography}>{item.message}</Typography>
-    </Popover>
-  </div>)
+    </Marker >
+  )
 };
 
 export default function Index() {
@@ -108,6 +75,14 @@ export default function Index() {
   const [help, setHelp] = React.useState(false);
   const [quarantine, setQuarantine] = React.useState(false);
   const [markers, setMarkers] = React.useState([]);
+  const [popupInfo, setPopupInfo] = React.useState(null);
+  const [viewport, setViewport] = React.useState({
+    width: '100%',
+    height: '95vh',
+    latitude: 50.51,
+    longitude: 4.20,
+    zoom: 8
+  });
 
   /**
    * Methods
@@ -130,6 +105,30 @@ export default function Index() {
   const handleCloseQuarantineForm = () => {
     setQuarantine(false);
   };
+
+  const onClickMarker = (item) => {
+    console.log("click - item", item);
+    setPopupInfo(item);
+    console.log("click - popupInfo", popupInfo);
+  };
+
+  const renderPopup = () => {
+    if (!popupInfo) {
+      return null;
+    }
+
+    return (
+      <Popup
+        anchor="bottom"
+        longitude={popupInfo.point.coordinates[0]}
+        latitude={popupInfo.point.coordinates[1]}
+        closeOnClick={false}
+        onClose={() => setPopupInfo(null)}
+      >
+        <Typography className={classes.typography}>{popupInfo.message}</Typography>
+      </Popup>
+    );
+  }
 
   function getMarkers() {
     return axios.get(process.env.API_URL + 'markers').then((res) => {
@@ -174,13 +173,13 @@ export default function Index() {
         <Button onClick={handleOpenQuarantineForm} variant="contained" color="primary">Need help</Button>
       </Toolbar>
     </AppBar>
-    <div style={{height: '95vh', width: '100%'}}>
-      <GoogleMapReact
-        defaultCenter={{lat: 50.51, lng: 4.20}}
-        defaultZoom={8}>
-        {markers.map((item) => <QMarker key={item.id} lat={item.lat} lng={item.lng} text={item.title} item={item} />)}
-      </GoogleMapReact>
-    </div>
+    <ReactMapGL
+      {...viewport}
+      onViewportChange={setViewport}
+      mapboxApiAccessToken={process.env.MAPBOX_TOKEN}>
+      {markers.map((item) => <QMarker key={item.id} lat={item.point.coordinates[1]} lng={item.point.coordinates[0]} item={item} onClick={(item) => onClickMarker(item)} />)}
+      {renderPopup()}
+    </ReactMapGL>
     <Modal
       id={'quarantine-form'}
       aria-labelledby="simple-modal-title"
