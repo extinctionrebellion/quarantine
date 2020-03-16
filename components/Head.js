@@ -29,6 +29,7 @@ const Head = (props) => (
     <meta property="og:image:height" content="630" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" />
     <script src={"https://maps.googleapis.com/maps/api/js?key="+process.env.GOOGLEMAP_KEY+"&libraries=places"}/>
   </NextHead>
 );

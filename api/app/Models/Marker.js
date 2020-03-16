@@ -16,7 +16,7 @@ class Marker extends Model {
   getPoint({ lat, lng }) {
     return {
       type: 'point',
-      coordinates: [lat, lng]
+      coordinates: [parseFloat(lng), parseFloat(lat)]
     }
   }
 }
