@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Form } from '../components';
 import axios from 'axios';
 import GeolocInput from "../components/GeolocInput";
+import Header from "../components/Header";
 
 /**
  * Default class styles for this component
@@ -168,16 +169,7 @@ export default function Index() {
   };
 
   return <div style={{height: '100vh', width: '100%', margin: 0, padding: 0}}>
-    <AppBar position="static">
-      <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"/>
-        <Typography variant="h6" className={classes.title}>
-          <AddAlert/> Quarantine App
-        </Typography>
-        <Button onClick={handleOpenHelpForm} variant="contained">Propose my help</Button>
-        <Button onClick={handleOpenQuarantineForm} variant="contained" color="primary">Need help</Button>
-      </Toolbar>
-    </AppBar>
+    <Header></Header>
     <ReactMapGL
       {...viewport}
       onViewportChange={setViewport}
