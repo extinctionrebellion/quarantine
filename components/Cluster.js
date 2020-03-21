@@ -16,6 +16,19 @@ class Cluster extends React.Component {
                 geometry: { type: 'Point', coordinates: [item.lng, item.lat] }
             })),
         };
+
+        return (
+            <Source
+                type="geojson"
+                data={geojson}
+                cluster={true}
+                clusterMaxZoom={14}
+                clusterRadius={50}
+            >
+                <Layer />
+
+            </Source>
+        )
     }
 }
 
