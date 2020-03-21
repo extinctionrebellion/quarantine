@@ -55,6 +55,84 @@ adonis seed
 adonis serve
 ```
 
+# Database structure :
+
+# User
+
+User of the platform (could be an helper or an helped)
+
+- id
+- username
+- description
+- first_name
+- last_name
+- email
+- thumb
+- password
+- phone
+- type
+- status
+- created_at
+- updated_at
+- main_address_id
+
+# Address
+- id
+- address
+- street
+- number
+- postcode
+- neighbourhood
+- region
+- city
+- country
+- lat
+- lng
+
+# Markers
+
+- id
+- phone
+- name
+- detail
+- email
+- type (helper|helped)
+- status
+- user_id
+- address
+- lat
+- lng
+- address_id
+- transaction_id
+- transaction_type
+- transaction_status
+- transaction_link
+- created_at
+- updated_at
+- meta
+-- notes
+- updated_at
+- created_at
+
+# Matches
+
+- id
+- message
+- helped_id
+- helper_id
+- status (inprogress|blocked|accepted)
+- updated_at
+- created_at
+
+# Tokens
+
+Social Auth token
+
+- id
+- user_id
+- token
+- type
+
 ## Usage
 
 This app use Next.JS for the front-end App and Adonis for the Api part.
@@ -63,7 +141,7 @@ This app use Next.JS for the front-end App and Adonis for the Api part.
 
 #### /register [POST]
 
-Register an user (helper/helped) in the database. This would also send him an email.
+Register an user in the database. This would also send him an email to verify his account.
 
 ##### Params :
 - email*
@@ -75,10 +153,9 @@ Register an user (helper/helped) in the database. This would also send him an em
 - address*
 - lat*
 - lng*
-- type : 'helper' (student) or 'helped' (senior)*
-- status : [verified, active]*
-- notes : Notes for the helped person
-- represented_by : fields to add information about who represent the helped person
+- type : 'helper' or 'helped' or 'both'* (computed var based on
+- status : [inactive, active]*
+- verified : 1|0
 
 #### /login [GET]
 
@@ -106,72 +183,33 @@ Get all the informations related to the logged in users
 - lng
 - type
 - status
-- orders : List of available orders (when user is type helper)
+- proposals : List of available proposals (when user is type helper)
 - requests : List of his requests (when user is type helped)
 
 #### /search [GET]
 
-This will order by distance the available orders to do for the student
+This will order by distance the available markers
 
 ##### Params :
 - lat
 - lng
+- type : helper|helped
 
 ##### Returns :
 
-Array of orders
+Array of markers
 
 #### /users [GET]
 
-Get the list of registered users
+Get the list of registered users (/!\ don't show confidential data)
 
-#### /orders [GET]
+#### /markers [GET] (todo)
 
-Get the list of available orders
+#### Params :
+- type : (helper|helped)
+- status : (active|completed)
 
-
-# Database structure :
-
-# User
-
-- id
-- username
-- email
-- thumb
-- password
-- name
-- phone
-- surname
-- address
-- lat
-- lng
-- type
-- status
-- notes
-- represented_by
-- created_at
-- updated_at
-
-# Order
-
-- id
-- phone
-- name
-- detail
-- email
-- type
-- status
-- helped_id
-- helper_id
-- address
-- lat
-- lng
-- transaction_id
-- transaction_type
-- transaction_status
-- transaction_link
-- created_at
-- updated_at
+Get the list of available request
 
 ### TODOS
 

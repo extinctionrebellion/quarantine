@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import GeolocInput from "./GeolocInput";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -29,6 +30,7 @@ export default function Header(){
     <Toolbar className={classes.toolbar}>
       <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
         <Link variant="button" color="textPrimary" href="/" className={classes.link}>Solidarity App</Link>
+        <GeolocInput></GeolocInput>
       </Typography>
       <nav>
         <Link variant="button" color="textPrimary" href="/" className={classes.link}>
