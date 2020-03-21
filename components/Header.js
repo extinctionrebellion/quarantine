@@ -28,7 +28,7 @@ export default function Header(){
   return <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
     <Toolbar className={classes.toolbar}>
       <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-        Solidarity App
+        <Link variant="button" color="textPrimary" href="/" className={classes.link}>Solidarity App</Link>
       </Typography>
       <nav>
         <Link variant="button" color="textPrimary" href="/" className={classes.link}>
