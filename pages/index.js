@@ -7,6 +7,7 @@ import { Form } from '../components';
 import axios from 'axios';
 import GeolocInput from "../components/GeolocInput";
 import Header from "../components/Header";
+import { Cluster } from '../components';
 
 /**
  * Default class styles for this component
@@ -173,9 +174,12 @@ export default function Index() {
     <ReactMapGL
       {...viewport}
       onViewportChange={setViewport}
-      mapboxApiAccessToken={process.env.MAPBOX_TOKEN}>
-      {markers.map((item) => <QMarker key={item.id} lat={item.point.coordinates[1]} lng={item.point.coordinates[0]} item={item} onClick={(item) => onClickMarker(item)} />)}
-      {renderPopup()}
+      mapboxApiAccessToken={process.env.MAPBOX_TOKEN}
+    >
+      {/*markers.map((item) => <QMarker key={item.id} lat={item.point.coordinates[1]} lng={item.point.coordinates[0]} item={item} onClick={(item) => onClickMarker(item)} />)*/}
+      {/*renderPopup()*/}
+      <Cluster data={markers} type='quarantine'/>
+      <Cluster data={markers} type='help'/>
     </ReactMapGL>
     <Modal
       id={'quarantine-form'}
