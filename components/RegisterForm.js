@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Copyright from "./Copyright";
+import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -53,7 +54,7 @@ const handleSubmit = event => {
     data: {...userFormInput}
   })
   .then(response => console.log(response))
-  .catch(error => console.log(error))
+  .catch(error => console.log(error.response))
 };
 
 export default function SignUp() {

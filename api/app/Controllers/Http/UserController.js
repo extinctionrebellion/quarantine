@@ -16,10 +16,11 @@ class UserController {
   async store({auth, response, request}) {
 
     let user = await new User;
-
-    user.username = request.input('name');
+    user.first_name = request.input('firstName');
+    user.last_name = request.input('lastName');
+    user.username = user.first_name + user.last_name;
     user.email = request.input('email');
-    user.password = request.input('email');
+    user.password = request.input('password');
     user.save();
 
     /**
