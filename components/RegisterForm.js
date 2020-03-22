@@ -43,8 +43,18 @@ const userFormInput = {
 
 const onChange = event => {
   userFormInput[event.target.name] = event.target.value;
-  console.log(userFormInput);
 }
+
+const handleSubmit = event => {
+  event.preventDefault(event)
+  axios({
+    method: 'POST',
+    url: 'http://localhost:3333/api/v1/register',
+    data: {...userFormInput}
+  })
+  .then(response => console.log(response))
+  .catch(error => console.log(error))
+};
 
 export default function SignUp() {
   const classes = useStyles();
@@ -59,7 +69,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
