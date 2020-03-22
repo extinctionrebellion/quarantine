@@ -34,6 +34,18 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const userFormInput = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+}
+
+const onChange = event => {
+  userFormInput[event.target.name] = event.target.value;
+  console.log(userFormInput);
+}
+
 export default function SignUp() {
   const classes = useStyles();
 
@@ -59,6 +71,7 @@ export default function SignUp() {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -70,6 +83,7 @@ export default function SignUp() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -81,6 +95,7 @@ export default function SignUp() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -93,6 +108,7 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
